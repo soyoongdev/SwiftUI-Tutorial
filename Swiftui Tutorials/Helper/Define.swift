@@ -6,4 +6,11 @@
 //
 
 import SwiftUI
-import Foundation
+
+
+enum MusicApiCall: String {
+    case InsertMusic = "InsertMusic"
+    case UpdateMusic = "UpdateMusic"
+    case GetAllMusic = "GetAllMusic"
+    case DeleteMusic = "DeleteMusic"
+}

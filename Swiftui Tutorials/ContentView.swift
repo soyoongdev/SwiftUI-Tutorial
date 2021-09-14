@@ -6,7 +6,8 @@ struct ContentView: View {
 //        ScrollViewOffset()
 //        CustomActionSheet()
 //        ScrollViewOffset()
-        ObservableObject_StateObject()
+//        ObservableObject_StateObject()
+        SwiftUIApiCall()
     }
 }
 
