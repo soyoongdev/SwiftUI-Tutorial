@@ -17,6 +17,7 @@ struct ObservableObject_StateObject: View {
             List {
                 ForEach(fruitViewModel.fruitArray) {fruit in
                     itemList(name: fruit.name, count: fruit.count)
+                        
                 }
                 .onDelete(perform: fruitViewModel.deleteFruit(index:))
             }

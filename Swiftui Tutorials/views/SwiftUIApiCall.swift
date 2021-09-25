@@ -19,7 +19,7 @@ struct SwiftUIApiCall: View {
                     VStack {
                         ForEach(topMusic.topMusicArray, id: \.self) { value in
                             ItemCardMusic(urlImage: value.image_banner, singer: value.name_singer, music: value.name_song)
-                            
+
                         }
                     }
                 }
@@ -28,12 +28,8 @@ struct SwiftUIApiCall: View {
                 ProgressView()
             }
         }
-        .onAppear() {
-            topMusic.fetchApi()
-        }
     }
-    
-    
+
 }
 
 private struct ItemCardMusic: View {

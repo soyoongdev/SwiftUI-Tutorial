@@ -14,14 +14,29 @@
 		B22805A226EF60A7007A1A9C /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22805A126EF60A7007A1A9C /* FruitModel.swift */; };
 		B22805A426EF611F007A1A9C /* ObservableObject_StateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22805A326EF611F007A1A9C /* ObservableObject_StateObject.swift */; };
 		B24FACFF26E5244300570B76 /* ScrollViewOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24FACFE26E5244300570B76 /* ScrollViewOffset.swift */; };
+		B25B084E26F1916E002AF49A /* HouseTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B084D26F1916E002AF49A /* HouseTemplate.swift */; };
+		B25B085026F1B458002AF49A /* Covid19.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B084F26F1B458002AF49A /* Covid19.swift */; };
+		B25B085326F1B644002AF49A /* InfoCovid19Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B085226F1B644002AF49A /* InfoCovid19Views.swift */; };
+		B25B085526F1B660002AF49A /*  .swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B085426F1B660002AF49A /*  .swift */; };
 		B272985F267D4350009AC996 /* Swiftui_TutorialsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B272985E267D4350009AC996 /* Swiftui_TutorialsApp.swift */; };
 		B2729861267D4350009AC996 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2729860267D4350009AC996 /* ContentView.swift */; };
 		B2729863267D4351009AC996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2729862267D4351009AC996 /* Assets.xcassets */; };
 		B2729866267D4351009AC996 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2729865267D4351009AC996 /* Preview Assets.xcassets */; };
+		B2744BE626F5D04A0084ECB2 /* ActionSheetCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2744BE526F5D04A0084ECB2 /* ActionSheetCustomView.swift */; };
 		B28E18CD26EF7D48005D5196 /* SwiftUIApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E18CC26EF7D48005D5196 /* SwiftUIApiCall.swift */; };
 		B28E18CF26EF9019005D5196 /* Top100Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E18CE26EF9019005D5196 /* Top100Music.swift */; };
 		B28E18D226EF923A005D5196 /* TextDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E18D126EF923A005D5196 /* TextDictionary.swift */; };
 		B28E18D426EF9244005D5196 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E18D326EF9244005D5196 /* Define.swift */; };
+		B29123A426FC906700EBA310 /* CustomUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29123A326FC906700EBA310 /* CustomUIViewController.swift */; };
+		B2BC7F3326F0474500F1FF64 /* DishplayHouseTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC7F3226F0474500F1FF64 /* DishplayHouseTemplate.swift */; };
+		B2BC7F3526F0475000F1FF64 /* thietthach.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC7F3426F0475000F1FF64 /* thietthach.swift */; };
+		B2BC7F3826F04A4E00F1FF64 /* HouseTemplateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC7F3726F04A4E00F1FF64 /* HouseTemplateViewModel.swift */; };
+		B2C338C526F79867000E1761 /* URLRequestApiExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C338C426F79867000E1761 /* URLRequestApiExample.swift */; };
+		B2D1A14126F4FAE1008F951F /* PromotionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1A14026F4FAE1008F951F /* PromotionModel.swift */; };
+		B2D1A14326F4FBD8008F951F /* PromotionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1A14226F4FBD8008F951F /* PromotionViews.swift */; };
+		B2E032DF26F35DA60063A7C6 /* GridImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E032DE26F35DA60063A7C6 /* GridImageView.swift */; };
+		B2E032E126F35DB50063A7C6 /* GridAlbumImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E032E026F35DB50063A7C6 /* GridAlbumImageViewModel.swift */; };
+		B2FD98E526F8AF7F00C256DA /* SheetResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FD98E426F8AF7F00C256DA /* SheetResize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,16 +47,31 @@
 		B22805A126EF60A7007A1A9C /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
 		B22805A326EF611F007A1A9C /* ObservableObject_StateObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject_StateObject.swift; sourceTree = "<group>"; };
 		B24FACFE26E5244300570B76 /* ScrollViewOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffset.swift; sourceTree = "<group>"; };
+		B25B084D26F1916E002AF49A /* HouseTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseTemplate.swift; sourceTree = "<group>"; };
+		B25B084F26F1B458002AF49A /* Covid19.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19.swift; sourceTree = "<group>"; };
+		B25B085226F1B644002AF49A /* InfoCovid19Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCovid19Views.swift; sourceTree = "<group>"; };
+		B25B085426F1B660002AF49A /*  .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " .swift"; sourceTree = "<group>"; };
 		B272985B267D4350009AC996 /* Swiftui Tutorials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swiftui Tutorials.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B272985E267D4350009AC996 /* Swiftui_TutorialsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiftui_TutorialsApp.swift; sourceTree = "<group>"; };
 		B2729860267D4350009AC996 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B2729862267D4351009AC996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2729865267D4351009AC996 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B2729867267D4351009AC996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2744BE526F5D04A0084ECB2 /* ActionSheetCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetCustomView.swift; sourceTree = "<group>"; };
 		B28E18CC26EF7D48005D5196 /* SwiftUIApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIApiCall.swift; sourceTree = "<group>"; };
 		B28E18CE26EF9019005D5196 /* Top100Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top100Music.swift; sourceTree = "<group>"; };
 		B28E18D126EF923A005D5196 /* TextDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDictionary.swift; sourceTree = "<group>"; };
 		B28E18D326EF9244005D5196 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		B29123A326FC906700EBA310 /* CustomUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIViewController.swift; sourceTree = "<group>"; };
+		B2BC7F3226F0474500F1FF64 /* DishplayHouseTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishplayHouseTemplate.swift; sourceTree = "<group>"; };
+		B2BC7F3426F0475000F1FF64 /* thietthach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thietthach.swift; sourceTree = "<group>"; };
+		B2BC7F3726F04A4E00F1FF64 /* HouseTemplateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseTemplateViewModel.swift; sourceTree = "<group>"; };
+		B2C338C426F79867000E1761 /* URLRequestApiExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestApiExample.swift; sourceTree = "<group>"; };
+		B2D1A14026F4FAE1008F951F /* PromotionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionModel.swift; sourceTree = "<group>"; };
+		B2D1A14226F4FBD8008F951F /* PromotionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionViews.swift; sourceTree = "<group>"; };
+		B2E032DE26F35DA60063A7C6 /* GridImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridImageView.swift; sourceTree = "<group>"; };
+		B2E032E026F35DB50063A7C6 /* GridAlbumImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridAlbumImageViewModel.swift; sourceTree = "<group>"; };
+		B2FD98E426F8AF7F00C256DA /* SheetResize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetResize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +99,10 @@
 			children = (
 				B22805A126EF60A7007A1A9C /* FruitModel.swift */,
 				B28E18CE26EF9019005D5196 /* Top100Music.swift */,
+				B2BC7F3426F0475000F1FF64 /* thietthach.swift */,
+				B25B084D26F1916E002AF49A /* HouseTemplate.swift */,
+				B25B084F26F1B458002AF49A /* Covid19.swift */,
+				B2D1A14026F4FAE1008F951F /* PromotionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -76,13 +110,39 @@
 		B24B8F942684E44100712DE3 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				B25B085126F1B61B002AF49A /* InfomationCovid19 */,
+				B2BC7F3626F04A3200F1FF64 /* HouseTemplate */,
 				B22389E026D11240009A9E5A /* GeometryReaderBootCamp.swift */,
 				B24FACFE26E5244300570B76 /* ScrollViewOffset.swift */,
 				B20F047126E9EBDB00258EE4 /* CustomActionSheet.swift */,
 				B22805A326EF611F007A1A9C /* ObservableObject_StateObject.swift */,
 				B28E18CC26EF7D48005D5196 /* SwiftUIApiCall.swift */,
+				B2E032DE26F35DA60063A7C6 /* GridImageView.swift */,
+				B2D1A14226F4FBD8008F951F /* PromotionViews.swift */,
+				B2744BE526F5D04A0084ECB2 /* ActionSheetCustomView.swift */,
+				B2C338C426F79867000E1761 /* URLRequestApiExample.swift */,
+				B2FD98E426F8AF7F00C256DA /* SheetResize.swift */,
+				B29123A326FC906700EBA310 /* CustomUIViewController.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		B25B085126F1B61B002AF49A /* InfomationCovid19 */ = {
+			isa = PBXGroup;
+			children = (
+				B25B085226F1B644002AF49A /* InfoCovid19Views.swift */,
+			);
+			path = InfomationCovid19;
+			sourceTree = "<group>";
+		};
+		B25B085626F1B666002AF49A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B25B085426F1B660002AF49A /*  .swift */,
+				B2BC7F3726F04A4E00F1FF64 /* HouseTemplateViewModel.swift */,
+				B2E032E026F35DB50063A7C6 /* GridAlbumImageViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B2729852267D4350009AC996 = {
@@ -104,6 +164,7 @@
 		B272985D267D4350009AC996 /* Swiftui Tutorials */ = {
 			isa = PBXGroup;
 			children = (
+				B25B085626F1B666002AF49A /* ViewModel */,
 				B28E18D026EF9210005D5196 /* Helper */,
 				B22805A026EF604A007A1A9C /* Model */,
 				B20F047326E9EBF000258EE4 /* CommonViews */,
@@ -134,6 +195,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		B2BC7F3626F04A3200F1FF64 /* HouseTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				B2BC7F3226F0474500F1FF64 /* DishplayHouseTemplate.swift */,
+			);
+			path = HouseTemplate;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +219,8 @@
 			dependencies = (
 			);
 			name = "Swiftui Tutorials";
+			packageProductDependencies = (
+			);
 			productName = "Swiftui Tutorials";
 			productReference = B272985B267D4350009AC996 /* Swiftui Tutorials.app */;
 			productType = "com.apple.product-type.application";
@@ -177,6 +248,8 @@
 				Base,
 			);
 			mainGroup = B2729852267D4350009AC996;
+			packageReferences = (
+			);
 			productRefGroup = B272985C267D4350009AC996 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -203,19 +276,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2BC7F3326F0474500F1FF64 /* DishplayHouseTemplate.swift in Sources */,
 				B28E18CD26EF7D48005D5196 /* SwiftUIApiCall.swift in Sources */,
 				B2729861267D4350009AC996 /* ContentView.swift in Sources */,
+				B25B085026F1B458002AF49A /* Covid19.swift in Sources */,
 				B28E18D226EF923A005D5196 /* TextDictionary.swift in Sources */,
+				B25B084E26F1916E002AF49A /* HouseTemplate.swift in Sources */,
+				B2FD98E526F8AF7F00C256DA /* SheetResize.swift in Sources */,
+				B2D1A14326F4FBD8008F951F /* PromotionViews.swift in Sources */,
 				B20F047726E9EC1000258EE4 /* BlurView.swift in Sources */,
+				B25B085326F1B644002AF49A /* InfoCovid19Views.swift in Sources */,
 				B22389E126D11240009A9E5A /* GeometryReaderBootCamp.swift in Sources */,
 				B20F047226E9EBDB00258EE4 /* CustomActionSheet.swift in Sources */,
+				B2E032DF26F35DA60063A7C6 /* GridImageView.swift in Sources */,
+				B25B085526F1B660002AF49A /*  .swift in Sources */,
+				B2C338C526F79867000E1761 /* URLRequestApiExample.swift in Sources */,
+				B2E032E126F35DB50063A7C6 /* GridAlbumImageViewModel.swift in Sources */,
 				B20F047526E9EC0700258EE4 /* CustomCorner.swift in Sources */,
 				B24FACFF26E5244300570B76 /* ScrollViewOffset.swift in Sources */,
 				B22805A426EF611F007A1A9C /* ObservableObject_StateObject.swift in Sources */,
 				B28E18CF26EF9019005D5196 /* Top100Music.swift in Sources */,
 				B28E18D426EF9244005D5196 /* Define.swift in Sources */,
 				B22805A226EF60A7007A1A9C /* FruitModel.swift in Sources */,
+				B2BC7F3526F0475000F1FF64 /* thietthach.swift in Sources */,
+				B29123A426FC906700EBA310 /* CustomUIViewController.swift in Sources */,
 				B272985F267D4350009AC996 /* Swiftui_TutorialsApp.swift in Sources */,
+				B2BC7F3826F04A4E00F1FF64 /* HouseTemplateViewModel.swift in Sources */,
+				B2D1A14126F4FAE1008F951F /* PromotionModel.swift in Sources */,
+				B2744BE626F5D04A0084ECB2 /* ActionSheetCustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

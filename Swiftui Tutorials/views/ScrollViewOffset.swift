@@ -126,15 +126,18 @@ private struct Home: View {
                 
             CustomScrollView(state: $state, showsIndicators: false, axis: .vertical) {
                 VStack(spacing: 10) {
-                    ForEach(1..<100, id: \.self) { index in
-                        userItem(index: index)
+                    ForEach(userData) { index in
+                        userItem(image: index.image, name: index.name, age: index.age)
                     }
                 }
             }
             .padding(.top, 80)
         }
     }
-    func headerFriends() -> some View {
+}
+
+struct headerFriends: View {
+    var body: some View {
         VStack {
             HStack {
                 Image("maxresdefault")
@@ -186,11 +189,17 @@ private struct Home: View {
             )
         }
     }
+}
+
+struct userItem: View {
+    let image: String
+    let name: String
+    let age: Int
     
-    func userItem(index: Int) -> some View {
+    var body: some View {
         VStack {
             HStack {
-                Image("maxresdefault")
+                Image("\(image)")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 46, height: 46)
@@ -199,12 +208,12 @@ private struct Home: View {
                 
                 
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("Anna")
+                    Text("\(name)")
                         .font(.headline)
                         .foregroundColor(.black)
                         .fontWeight(.heavy)
                     
-                    Text("\(index)")
+                    Text("\(age)")
                         .font(.subheadline)
                         .foregroundColor(.black)
                         .fontWeight(.regular)
@@ -235,14 +244,13 @@ private struct Home: View {
     }
 }
 
-
 struct User: Identifiable {
-    let id = UUID()
+    var id = UUID().uuidString
     var image: String
     var name: String
     var age: Int
 }
-var userData = [
+var userData:[User] = [
     User(image: "maxresdefault", name: "Anna", age: 20),
     User(image: "maxresdefault", name: "Anna", age: 21),
     User(image: "maxresdefault", name: "Anna", age: 22),

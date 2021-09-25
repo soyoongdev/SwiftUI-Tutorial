@@ -21,13 +21,12 @@ struct Top100Music: Hashable, Codable {
 class Top100MusicViewModel: ObservableObject {
     let urlApiCall: String = "https://freewebking.000webhostapp.com/topmusic.php?apicall=\(MusicApiCall.GetAllMusic)"
     @Published var topMusicArray: [Top100Music] = []
-    
+    @State var imageGetting: [String] = []
     @State private var progress: Double = 0
     private let total: Double = 1
     @State private var dataTask: URLSessionDataTask?
     @State private var observation: NSKeyValueObservation?
     @State private var image: UIImage?
-    
     
     init() {
         fetchApi()
@@ -47,7 +46,6 @@ class Top100MusicViewModel: ObservableObject {
                 
                 DispatchQueue.main.async {
                     self?.topMusicArray = music
-                    print("\(music)")
                 }
                 
             } catch {
