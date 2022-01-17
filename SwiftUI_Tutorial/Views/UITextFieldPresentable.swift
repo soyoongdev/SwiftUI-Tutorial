@@ -5,7 +5,6 @@
 //  Created by Hau Nguyen on 15/12/2021.
 //
 
-import UIKit
 import SwiftUI
 
 struct UITextFieldPresentable: UIViewRepresentable {

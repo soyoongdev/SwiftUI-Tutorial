@@ -13,7 +13,7 @@ struct UIKitConvertableSwiftUIPresentable: View {
     var body: some View {   
         
         VStack {
-            Text(text)
+            Text(text == "" ? "Hello" : text)
                 .font(.title)
             
             HStack {
