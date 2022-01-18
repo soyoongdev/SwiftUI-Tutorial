@@ -16,7 +16,8 @@ struct ContentView: View {
 //                    .aspectRatio(contentMode: .fit)
 //            }
 //            SliderRangeView()
-            ScrollViewOffsetNewPreview()
+//            ScrollViewOffsetNewPreview()
+            UseLockerSlider()
             
         }
 //        VStack {

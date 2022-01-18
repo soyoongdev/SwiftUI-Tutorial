@@ -21,11 +21,12 @@
 		B2699319276C33470056D631 /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2699318276C33470056D631 /* ZoomableScrollView.swift */; };
 		B269EB56278BD0DE0086DE40 /* SliderRangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B269EB55278BD0DE0086DE40 /* SliderRangeView.swift */; };
 		B269EB58278BD0F10086DE40 /* SliderRangeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B269EB57278BD0F10086DE40 /* SliderRangeController.swift */; };
-		B269EB5A278BE0B20086DE40 /* SliderButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B269EB59278BE0B20086DE40 /* SliderButtonView.swift */; };
+		B269EB5A278BE0B20086DE40 /* SliderRange3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B269EB59278BE0B20086DE40 /* SliderRange3.swift */; };
 		B277A0532784063500A88380 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277A0522784063500A88380 /* AsyncImageView.swift */; };
 		B277A0552784065200A88380 /* AsyncImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277A0542784065200A88380 /* AsyncImageViewController.swift */; };
 		B280F3E827957D0000C7F011 /* ScrollViewOffsetNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B280F3E727957D0000C7F011 /* ScrollViewOffsetNew.swift */; };
 		B28FD91327827DD700AE3133 /* PinchImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28FD91227827DD700AE3133 /* PinchImageView.swift */; };
+		B29201AD2796AB6E00226F93 /* SliderRange2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29201AC2796AB6E00226F93 /* SliderRange2.swift */; };
 		B2C118AF2770829400F84CF0 /* RefreshableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C118AE2770829400F84CF0 /* RefreshableScrollView.swift */; };
 		B2C1F28D2786CBD500EE0005 /* ScrollViewOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1F28C2786CBD500EE0005 /* ScrollViewOffset.swift */; };
 		B2C557392769C9720016EF53 /* SwiftUI_TutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C557382769C9720016EF53 /* SwiftUI_TutorialApp.swift */; };
@@ -52,11 +53,12 @@
 		B2699318276C33470056D631 /* ZoomableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
 		B269EB55278BD0DE0086DE40 /* SliderRangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderRangeView.swift; sourceTree = "<group>"; };
 		B269EB57278BD0F10086DE40 /* SliderRangeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderRangeController.swift; sourceTree = "<group>"; };
-		B269EB59278BE0B20086DE40 /* SliderButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderButtonView.swift; sourceTree = "<group>"; };
+		B269EB59278BE0B20086DE40 /* SliderRange3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderRange3.swift; sourceTree = "<group>"; };
 		B277A0522784063500A88380 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		B277A0542784065200A88380 /* AsyncImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageViewController.swift; sourceTree = "<group>"; };
 		B280F3E727957D0000C7F011 /* ScrollViewOffsetNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetNew.swift; sourceTree = "<group>"; };
 		B28FD91227827DD700AE3133 /* PinchImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchImageView.swift; sourceTree = "<group>"; };
+		B29201AC2796AB6E00226F93 /* SliderRange2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderRange2.swift; sourceTree = "<group>"; };
 		B2C118AE2770829400F84CF0 /* RefreshableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableScrollView.swift; sourceTree = "<group>"; };
 		B2C1F28C2786CBD500EE0005 /* ScrollViewOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffset.swift; sourceTree = "<group>"; };
 		B2C557352769C9720016EF53 /* SwiftUI_Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_Tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,7 +136,8 @@
 			children = (
 				B269EB55278BD0DE0086DE40 /* SliderRangeView.swift */,
 				B269EB57278BD0F10086DE40 /* SliderRangeController.swift */,
-				B269EB59278BE0B20086DE40 /* SliderButtonView.swift */,
+				B269EB59278BE0B20086DE40 /* SliderRange3.swift */,
+				B29201AC2796AB6E00226F93 /* SliderRange2.swift */,
 			);
 			path = SliderRange;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			files = (
 				B28FD91327827DD700AE3133 /* PinchImageView.swift in Sources */,
 				B2ED86392769D34D00612F0D /* ImageViews.swift in Sources */,
+				B29201AD2796AB6E00226F93 /* SliderRange2.swift in Sources */,
 				B277A0552784065200A88380 /* AsyncImageViewController.swift in Sources */,
 				B215578E2775AAE5005FDA24 /* LoadMoreScrolView.swift in Sources */,
 				B2C5573B2769C9720016EF53 /* ContentView.swift in Sources */,
@@ -326,7 +330,7 @@
 				B216885D276DBAF400ACA574 /* ModalView.swift in Sources */,
 				B2C118AF2770829400F84CF0 /* RefreshableScrollView.swift in Sources */,
 				B2ED863F2769D61500612F0D /* ImageViewController.swift in Sources */,
-				B269EB5A278BE0B20086DE40 /* SliderButtonView.swift in Sources */,
+				B269EB5A278BE0B20086DE40 /* SliderRange3.swift in Sources */,
 				B2C557392769C9720016EF53 /* SwiftUI_TutorialApp.swift in Sources */,
 				B216885F276DBAF400ACA574 /* Modal.swift in Sources */,
 				B2C557492769C9FA0016EF53 /* UIKitConvertableSwiftUIPresentable.swift in Sources */,
