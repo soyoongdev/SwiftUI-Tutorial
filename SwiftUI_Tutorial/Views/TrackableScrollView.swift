@@ -6,15 +6,36 @@
 //
 
 import SwiftUI
+import SwiftUITrackableScrollView
 
-struct TrackableScrollView: View {
+struct TrackableScrollView2: View {
+    @State private var scrollViewContentOffset: CGFloat = 0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack(alignment: .top) {
+            Rectangle()
+                .fill(Color.white)
+                .frame(height: 100)
+                .overlay(
+                    Text("\(scrollViewContentOffset)")
+                )
+                .zIndex(1)
+            
+            TrackableScrollView(.vertical, showIndicators: false, contentOffset: $scrollViewContentOffset) {
+                VStack {
+                    ForEach(0..<100, id: \.self) { i in
+                        Text("\(i)")
+                            .padding()
+                            .frame(width: 100, alignment: .leading)
+                    }
+                }
+            }
+        }
     }
 }
 
-struct TrackableScrollView_Previews: PreviewProvider {
+struct TrackableScrollView2_Previews: PreviewProvider {
     static var previews: some View {
-        TrackableScrollView()
+        TrackableScrollView2()
     }
 }

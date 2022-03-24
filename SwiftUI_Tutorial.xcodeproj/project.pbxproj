@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B20B6A722799058E0041C866 /* Sliders in Frameworks */ = {isa = PBXBuildFile; productRef = B20B6A712799058E0041C866 /* Sliders */; };
+		B20B6A74279905AF0041C866 /* SliderRange4.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20B6A73279905AF0041C866 /* SliderRange4.swift */; };
+		B20BE7FB27DB5E47009CCB6B /* TextFieldAutoFocused.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20BE7FA27DB5E47009CCB6B /* TextFieldAutoFocused.swift */; };
 		B215578E2775AAE5005FDA24 /* LoadMoreScrolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B215578D2775AAE5005FDA24 /* LoadMoreScrolView.swift */; };
 		B216885C276DBAF400ACA574 /* ModalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2168858276DBAF400ACA574 /* ModalManager.swift */; };
 		B216885D276DBAF400ACA574 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2168859276DBAF400ACA574 /* ModalView.swift */; };
@@ -17,6 +20,8 @@
 		B232DA6E27741B5200D58DEC /* CustomNumberPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B232DA6D27741B5200D58DEC /* CustomNumberPad.swift */; };
 		B232DA7027741B6700D58DEC /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B232DA6F27741B6700D58DEC /* VerificationView.swift */; };
 		B232DA7227743D8D00D58DEC /* PinEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B232DA7127743D8D00D58DEC /* PinEntryView.swift */; };
+		B2341FD327E9A96500CE369E /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2341FD227E9A96500CE369E /* TrackableScrollView.swift */; };
+		B2341FD627E9A98800CE369E /* SwiftUITrackableScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = B2341FD527E9A98800CE369E /* SwiftUITrackableScrollView */; };
 		B259777427857E6E00DA0FDE /* ParalaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259777327857E6E00DA0FDE /* ParalaxHeader.swift */; };
 		B2699319276C33470056D631 /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2699318276C33470056D631 /* ZoomableScrollView.swift */; };
 		B269EB56278BD0DE0086DE40 /* SliderRangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B269EB55278BD0DE0086DE40 /* SliderRangeView.swift */; };
@@ -25,9 +30,12 @@
 		B277A0532784063500A88380 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277A0522784063500A88380 /* AsyncImageView.swift */; };
 		B277A0552784065200A88380 /* AsyncImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277A0542784065200A88380 /* AsyncImageViewController.swift */; };
 		B280F3E827957D0000C7F011 /* ScrollViewOffsetNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B280F3E727957D0000C7F011 /* ScrollViewOffsetNew.swift */; };
-		B28FD91327827DD700AE3133 /* PinchImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28FD91227827DD700AE3133 /* PinchImageView.swift */; };
 		B29201AD2796AB6E00226F93 /* SliderRange2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29201AC2796AB6E00226F93 /* SliderRange2.swift */; };
+		B2B50402279CA6EA00D22726 /* SliderRangeSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B2B50401279CA6EA00D22726 /* SliderRangeSwiftUI */; };
+		B2BF2CE127D9A79500C8695F /* ImageNew2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF2CE027D9A79500C8695F /* ImageNew2.swift */; };
+		B2BF2CE427D9B45500C8695F /* ZoomableScrollViewPOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF2CE327D9B45500C8695F /* ZoomableScrollViewPOD.swift */; };
 		B2C118AF2770829400F84CF0 /* RefreshableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C118AE2770829400F84CF0 /* RefreshableScrollView.swift */; };
+		B2C1CAA827EC306C00CCA014 /* InputViewFocussed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1CAA727EC306C00CCA014 /* InputViewFocussed.swift */; };
 		B2C1F28D2786CBD500EE0005 /* ScrollViewOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1F28C2786CBD500EE0005 /* ScrollViewOffset.swift */; };
 		B2C557392769C9720016EF53 /* SwiftUI_TutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C557382769C9720016EF53 /* SwiftUI_TutorialApp.swift */; };
 		B2C5573B2769C9720016EF53 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C5573A2769C9720016EF53 /* ContentView.swift */; };
@@ -41,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B20B6A73279905AF0041C866 /* SliderRange4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderRange4.swift; sourceTree = "<group>"; };
+		B20BE7FA27DB5E47009CCB6B /* TextFieldAutoFocused.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAutoFocused.swift; sourceTree = "<group>"; };
 		B215578D2775AAE5005FDA24 /* LoadMoreScrolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreScrolView.swift; sourceTree = "<group>"; };
 		B2168858276DBAF400ACA574 /* ModalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModalManager.swift; path = "../../../../SwiftUIModal/SwiftUIModal/Modal View/ModalManager.swift"; sourceTree = "<group>"; };
 		B2168859276DBAF400ACA574 /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModalView.swift; path = "../../../../SwiftUIModal/SwiftUIModal/Modal View/ModalView.swift"; sourceTree = "<group>"; };
@@ -49,6 +59,7 @@
 		B232DA6D27741B5200D58DEC /* CustomNumberPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberPad.swift; sourceTree = "<group>"; };
 		B232DA6F27741B6700D58DEC /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
 		B232DA7127743D8D00D58DEC /* PinEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinEntryView.swift; sourceTree = "<group>"; };
+		B2341FD227E9A96500CE369E /* TrackableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollView.swift; sourceTree = "<group>"; };
 		B259777327857E6E00DA0FDE /* ParalaxHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParalaxHeader.swift; sourceTree = "<group>"; };
 		B2699318276C33470056D631 /* ZoomableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
 		B269EB55278BD0DE0086DE40 /* SliderRangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderRangeView.swift; sourceTree = "<group>"; };
@@ -57,9 +68,11 @@
 		B277A0522784063500A88380 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		B277A0542784065200A88380 /* AsyncImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageViewController.swift; sourceTree = "<group>"; };
 		B280F3E727957D0000C7F011 /* ScrollViewOffsetNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetNew.swift; sourceTree = "<group>"; };
-		B28FD91227827DD700AE3133 /* PinchImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchImageView.swift; sourceTree = "<group>"; };
 		B29201AC2796AB6E00226F93 /* SliderRange2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderRange2.swift; sourceTree = "<group>"; };
+		B2BF2CE027D9A79500C8695F /* ImageNew2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNew2.swift; sourceTree = "<group>"; };
+		B2BF2CE327D9B45500C8695F /* ZoomableScrollViewPOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollViewPOD.swift; sourceTree = "<group>"; };
 		B2C118AE2770829400F84CF0 /* RefreshableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableScrollView.swift; sourceTree = "<group>"; };
+		B2C1CAA727EC306C00CCA014 /* InputViewFocussed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewFocussed.swift; sourceTree = "<group>"; };
 		B2C1F28C2786CBD500EE0005 /* ScrollViewOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffset.swift; sourceTree = "<group>"; };
 		B2C557352769C9720016EF53 /* SwiftUI_Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_Tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C557382769C9720016EF53 /* SwiftUI_TutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_TutorialApp.swift; sourceTree = "<group>"; };
@@ -79,6 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B20B6A722799058E0041C866 /* Sliders in Frameworks */,
+				B2341FD627E9A98800CE369E /* SwiftUITrackableScrollView in Frameworks */,
+				B2B50402279CA6EA00D22726 /* SliderRangeSwiftUI in Frameworks */,
 				B21A48C82779AD6A001FEC1D /* SwiftUIPullToRefresh in Frameworks */,
 				B21A48C32779A2B5001FEC1D /* SwiftUIRefresh in Frameworks */,
 			);
@@ -87,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B20BE7F927DB5E2D009CCB6B /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				B20BE7FA27DB5E47009CCB6B /* TextFieldAutoFocused.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		B215578C2775AACD005FDA24 /* LoadMoreScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,9 +133,11 @@
 		B232DA6C27741B3D00D58DEC /* VerificationOTPView */ = {
 			isa = PBXGroup;
 			children = (
+				B269931A276C375C0056D631 /* HalfSheet */,
 				B232DA6D27741B5200D58DEC /* CustomNumberPad.swift */,
 				B232DA6F27741B6700D58DEC /* VerificationView.swift */,
 				B232DA7127743D8D00D58DEC /* PinEntryView.swift */,
+				B2C1CAA727EC306C00CCA014 /* InputViewFocussed.swift */,
 			);
 			path = VerificationOTPView;
 			sourceTree = "<group>";
@@ -120,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				B2699318276C33470056D631 /* ZoomableScrollView.swift */,
+				B2BF2CE327D9B45500C8695F /* ZoomableScrollViewPOD.swift */,
 			);
 			path = ZoomableScrollView;
 			sourceTree = "<group>";
@@ -138,6 +165,7 @@
 				B269EB57278BD0F10086DE40 /* SliderRangeController.swift */,
 				B269EB59278BE0B20086DE40 /* SliderRange3.swift */,
 				B29201AC2796AB6E00226F93 /* SliderRange2.swift */,
+				B20B6A73279905AF0041C866 /* SliderRange4.swift */,
 			);
 			path = SliderRange;
 			sourceTree = "<group>";
@@ -149,14 +177,6 @@
 				B277A0542784065200A88380 /* AsyncImageViewController.swift */,
 			);
 			path = AsyncImageView;
-			sourceTree = "<group>";
-		};
-		B28FD91127827DBA00AE3133 /* PinchImageView */ = {
-			isa = PBXGroup;
-			children = (
-				B28FD91227827DD700AE3133 /* PinchImageView.swift */,
-			);
-			path = PinchImageView;
 			sourceTree = "<group>";
 		};
 		B2C118AD277081B100F84CF0 /* RefreshbleScrollView */ = {
@@ -207,14 +227,13 @@
 		B2C557472769C9B70016EF53 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B20BE7F927DB5E2D009CCB6B /* TextField */,
 				B269EB54278BD0C80086DE40 /* SliderRange */,
 				B277A0512784060F00A88380 /* AsyncImageView */,
-				B28FD91127827DBA00AE3133 /* PinchImageView */,
 				B215578C2775AACD005FDA24 /* LoadMoreScrollView */,
 				B232DA6C27741B3D00D58DEC /* VerificationOTPView */,
 				B2C118AD277081B100F84CF0 /* RefreshbleScrollView */,
 				B2168857276DB85E00ACA574 /* SheetModal */,
-				B269931A276C375C0056D631 /* HalfSheet */,
 				B2699317276C33280056D631 /* ZoomableScrollView */,
 				B2ED86372769D32900612F0D /* ImageViewer */,
 				B2C557482769C9FA0016EF53 /* UIKitConvertableSwiftUIPresentable.swift */,
@@ -222,6 +241,7 @@
 				B259777327857E6E00DA0FDE /* ParalaxHeader.swift */,
 				B2C1F28C2786CBD500EE0005 /* ScrollViewOffset.swift */,
 				B280F3E727957D0000C7F011 /* ScrollViewOffsetNew.swift */,
+				B2341FD227E9A96500CE369E /* TrackableScrollView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -232,6 +252,7 @@
 				B2ED86382769D34D00612F0D /* ImageViews.swift */,
 				B2ED863A2769D3A700612F0D /* ImageViewPresentable.swift */,
 				B2ED863E2769D61500612F0D /* ImageViewController.swift */,
+				B2BF2CE027D9A79500C8695F /* ImageNew2.swift */,
 			);
 			path = ImageViewer;
 			sourceTree = "<group>";
@@ -255,6 +276,9 @@
 			packageProductDependencies = (
 				B21A48C22779A2B5001FEC1D /* SwiftUIRefresh */,
 				B21A48C72779AD6A001FEC1D /* SwiftUIPullToRefresh */,
+				B20B6A712799058E0041C866 /* Sliders */,
+				B2B50401279CA6EA00D22726 /* SliderRangeSwiftUI */,
+				B2341FD527E9A98800CE369E /* SwiftUITrackableScrollView */,
 			);
 			productName = SwiftUI_Tutorial;
 			productReference = B2C557352769C9720016EF53 /* SwiftUI_Tutorial.app */;
@@ -286,6 +310,9 @@
 			packageReferences = (
 				B21A48C12779A2B5001FEC1D /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
 				B21A48C62779AD6A001FEC1D /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */,
+				B20B6A702799058E0041C866 /* XCRemoteSwiftPackageReference "sliders-backup" */,
+				B2B50400279CA6EA00D22726 /* XCRemoteSwiftPackageReference "SliderRangeSwiftUI" */,
+				B2341FD427E9A98800CE369E /* XCRemoteSwiftPackageReference "trackable-scroll-view" */,
 			);
 			productRefGroup = B2C557362769C9720016EF53 /* Products */;
 			projectDirPath = "";
@@ -313,7 +340,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B28FD91327827DD700AE3133 /* PinchImageView.swift in Sources */,
 				B2ED86392769D34D00612F0D /* ImageViews.swift in Sources */,
 				B29201AD2796AB6E00226F93 /* SliderRange2.swift in Sources */,
 				B277A0552784065200A88380 /* AsyncImageViewController.swift in Sources */,
@@ -321,11 +347,13 @@
 				B2C5573B2769C9720016EF53 /* ContentView.swift in Sources */,
 				B277A0532784063500A88380 /* AsyncImageView.swift in Sources */,
 				B232DA6E27741B5200D58DEC /* CustomNumberPad.swift in Sources */,
+				B2BF2CE427D9B45500C8695F /* ZoomableScrollViewPOD.swift in Sources */,
 				B259777427857E6E00DA0FDE /* ParalaxHeader.swift in Sources */,
 				B2C1F28D2786CBD500EE0005 /* ScrollViewOffset.swift in Sources */,
 				B280F3E827957D0000C7F011 /* ScrollViewOffsetNew.swift in Sources */,
 				B216885C276DBAF400ACA574 /* ModalManager.swift in Sources */,
 				B269EB58278BD0F10086DE40 /* SliderRangeController.swift in Sources */,
+				B20B6A74279905AF0041C866 /* SliderRange4.swift in Sources */,
 				B2ED863B2769D3A700612F0D /* ImageViewPresentable.swift in Sources */,
 				B216885D276DBAF400ACA574 /* ModalView.swift in Sources */,
 				B2C118AF2770829400F84CF0 /* RefreshableScrollView.swift in Sources */,
@@ -336,9 +364,13 @@
 				B2C557492769C9FA0016EF53 /* UIKitConvertableSwiftUIPresentable.swift in Sources */,
 				B2699319276C33470056D631 /* ZoomableScrollView.swift in Sources */,
 				B269EB56278BD0DE0086DE40 /* SliderRangeView.swift in Sources */,
+				B20BE7FB27DB5E47009CCB6B /* TextFieldAutoFocused.swift in Sources */,
+				B2C1CAA827EC306C00CCA014 /* InputViewFocussed.swift in Sources */,
+				B2BF2CE127D9A79500C8695F /* ImageNew2.swift in Sources */,
 				B2C5574B2769CAE60016EF53 /* UITextFieldPresentable.swift in Sources */,
 				B216885E276DBAF400ACA574 /* ModalModifiers.swift in Sources */,
 				B232DA7227743D8D00D58DEC /* PinEntryView.swift in Sources */,
+				B2341FD327E9A96500CE369E /* TrackableScrollView.swift in Sources */,
 				B232DA7027741B6700D58DEC /* VerificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -452,7 +484,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -472,7 +504,7 @@
 				DEVELOPMENT_TEAM = 3AMK848546;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUI_Tutorial/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,7 +512,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "swiftui.com.SwiftUI-Tutorial";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -494,7 +526,7 @@
 				DEVELOPMENT_TEAM = 3AMK848546;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUI_Tutorial/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,7 +534,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "swiftui.com.SwiftUI-Tutorial";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -530,6 +562,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B20B6A702799058E0041C866 /* XCRemoteSwiftPackageReference "sliders-backup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/moridaffy/sliders-backup.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		B21A48C12779A2B5001FEC1D /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/SwiftUIRefresh.git";
@@ -546,9 +586,30 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		B2341FD427E9A98800CE369E /* XCRemoteSwiftPackageReference "trackable-scroll-view" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxnatchanon/trackable-scroll-view.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		B2B50400279CA6EA00D22726 /* XCRemoteSwiftPackageReference "SliderRangeSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AnthonyCode274/SliderRangeSwiftUI.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B20B6A712799058E0041C866 /* Sliders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B20B6A702799058E0041C866 /* XCRemoteSwiftPackageReference "sliders-backup" */;
+			productName = Sliders;
+		};
 		B21A48C22779A2B5001FEC1D /* SwiftUIRefresh */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B21A48C12779A2B5001FEC1D /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
@@ -558,6 +619,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B21A48C62779AD6A001FEC1D /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */;
 			productName = SwiftUIPullToRefresh;
+		};
+		B2341FD527E9A98800CE369E /* SwiftUITrackableScrollView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2341FD427E9A98800CE369E /* XCRemoteSwiftPackageReference "trackable-scroll-view" */;
+			productName = SwiftUITrackableScrollView;
+		};
+		B2B50401279CA6EA00D22726 /* SliderRangeSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2B50400279CA6EA00D22726 /* XCRemoteSwiftPackageReference "SliderRangeSwiftUI" */;
+			productName = SliderRangeSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

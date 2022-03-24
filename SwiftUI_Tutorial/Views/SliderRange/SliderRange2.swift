@@ -50,29 +50,26 @@ struct LockerSlider<V>: View where V : BinaryFloatingPoint, V.Stride : BinaryFlo
         GeometryReader { proxy in
             
             VStack {
-                VStack(alignment: .center, spacing: 0) {
+                
+                
+                ZStack(alignment: .leading) {
+                    RoundedRectangle(cornerRadius: length / 2)
+                        .foregroundColor(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
                     
-                    // Thumb Min
-                    ZStack(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: length / 2)
-                            .foregroundColor(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
-                        
-                        Circle()
-                            .foregroundColor(.white)
-                            .frame(width: length, height: length)
-                            .offset(x: ((proxy.size.width - length) * ratio))
-                            .gesture(DragGesture(minimumDistance: 0)
-                                        .onChanged({ updateStatus(value: $0, proxy: proxy) })
-                                        .onEnded { _ in startX = nil })
-                            .overlay(
-                                ZStack {
-                                    Text("\(String(format: "%.2f", (proxy.size.width - length) * ratio))")
-                                        .font(.system(size: 10))
-                                }
-                                    .offset(x: ((proxy.size.width - length) * ratio))
-                            )
-                    }
-                    
+                    Circle()
+                        .foregroundColor(.white)
+                        .frame(width: length, height: length)
+                        .offset(x: ((proxy.size.width - length) * ratio))
+                        .gesture(DragGesture(minimumDistance: 0)
+                                    .onChanged({ updateStatus(value: $0, proxy: proxy) })
+                                    .onEnded { _ in startX = nil })
+                        .overlay(
+                            ZStack {
+                                Text("\(String(format: "%.2f", (proxy.size.width - length) * ratio))")
+                                    .font(.system(size: 10))
+                            }
+                                .offset(x: ((proxy.size.width - length) * ratio))
+                        )
                 }
                 .frame(height: length)
                 .overlay(overlay)

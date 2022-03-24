@@ -161,7 +161,7 @@ struct SliderRange2_Previews: PreviewProvider {
 }
 
 struct ContentView2: View {
-    @ObservedObject var slider = CustomSlider(start: 10, end: 100)
+    @ObservedObject var slider = CustomSlider(start: 0, end: 4)
     
     var body: some View {
         VStack {

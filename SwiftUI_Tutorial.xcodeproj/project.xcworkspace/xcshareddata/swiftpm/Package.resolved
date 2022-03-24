@@ -2,6 +2,24 @@
   "object": {
     "pins": [
       {
+        "package": "SliderRangeSwiftUI",
+        "repositoryURL": "https://github.com/AnthonyCode274/SliderRangeSwiftUI.git",
+        "state": {
+          "branch": "main",
+          "revision": "7c72a95563a67ff37132230ae12c1cad103ebe47",
+          "version": null
+        }
+      },
+      {
+        "package": "Sliders",
+        "repositoryURL": "https://github.com/moridaffy/sliders-backup.git",
+        "state": {
+          "branch": "master",
+          "revision": "9509587c706d3d079be6e620b4c4d68316558c9b",
+          "version": null
+        }
+      },
+      {
         "package": "Introspect",
         "repositoryURL": "https://github.com/siteline/SwiftUI-Introspect.git",
         "state": {
@@ -26,6 +44,15 @@
           "branch": null,
           "revision": "fa8fac7b5eb5c729983a8bef65f094b5e0d12014",
           "version": "0.0.3"
+        }
+      },
+      {
+        "package": "SwiftUITrackableScrollView",
+        "repositoryURL": "https://github.com/maxnatchanon/trackable-scroll-view.git",
+        "state": {
+          "branch": "master",
+          "revision": "4b094575c2370c3341d0b377a27b46bda4f937f7",
+          "version": null
         }
       }
     ]

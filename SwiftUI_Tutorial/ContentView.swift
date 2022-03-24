@@ -9,54 +9,63 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var modalManager: ModalManager
-    var body: some View {
-        ZStack {
-//            PinchImageView {
-//                AsyncImageView(url: .constant(URL(string: "https://developer.apple.com/swift/images/swift-og.png")!))
-//                    .aspectRatio(contentMode: .fit)
-//            }
-//            SliderRangeView()
-//            ScrollViewOffsetNewPreview()
-            UseLockerSlider()
+    @State private var username =  ""
+    @State private var password =  ""
+    
+    // set true , if you want to focus it initially, and set false if you want to focus it by tapping on it.
+    @State private var isUsernameFirstResponder : Bool? = true
+    @State private var isPasswordFirstResponder : Bool? =  false
+    
+    
+    var body : some View {
+        VStack(alignment: .center) {
             
+            Button {
+                
+                withAnimation {
+                    if isUsernameFirstResponder! { // true
+                        self.isUsernameFirstResponder = false
+                    } else {
+                        self.isUsernameFirstResponder = true
+                    }
+                    
+                    if isPasswordFirstResponder! {
+                        self.isPasswordFirstResponder = false
+                    } else {
+                        self.isPasswordFirstResponder = true
+                    }
+                }
+                
+            } label: {
+                Text("Next")
+            }
+            
+            ZStack {
+                
+                RoundedRectangle(cornerRadius: 5)
+                    .fill(Color.gray)
+                    .frame(width: 46, height: 46)
+                    .zIndex(0)
+                
+                TextFieldAutoFocused(text: $username,
+                                     nextResponder: $isPasswordFirstResponder,
+                                     isResponder: $isUsernameFirstResponder,
+                                     isSecured: false,
+                                     keyboard: .default)
+                    .frame(width: 0, height: 02)
+                    .zIndex(1)
+            }
+            
+            // assigning the next responder to nil , as this will be last textfield on the view.
+            TextFieldAutoFocused(text: $password,
+                                 nextResponder: .constant(nil),
+                                 isResponder: $isPasswordFirstResponder,
+                                 isSecured: true,
+                                 keyboard: .default)
         }
-//        VStack {
-//            ImageViewPresentable()
-//                .frame(height: UIScreen.main.bounds.height)
-//                Spacer()
-//        }
-//        .ignoresSafeArea()
-        
-//        StatefulPreviewWrapper("") {
-//            PinEntryView(pinCode: $0)
-//        }
-//        DisplayViewFresh()
-        
-        
-//        RefreshableScrollView {
-//            ZStack(alignment: .top) {
-//                DemoRefreshable()
-//                    .zIndex(10)
-//
-//                VStack(alignment: .leading) {
-//                    ForEach(0..<20, id: \.self) { item in
-//                        Text("Item number: \(item)")
-//                    }
-//                }
-//                .frame(width: UIScreen.main.bounds.width, alignment: .leading)
-//                .zIndex(1)
-//            }
-//        }
-        
-        
-//        SectionedTextField()
-        
-//        StatefulPreviewWrapper("12") {
-//            PinEntryView(pinLimit: 6, pinCode: $0)
-//        }
-//        .background(Color.black)
-//        .colorScheme(.dark)
+        .padding(.horizontal, 50)
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
