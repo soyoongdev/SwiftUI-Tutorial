@@ -1,65 +1,71 @@
 //
 //  ScrollViewOffsetNew.swift
-//  SwiftUI_Tutorial
+//  ThietThachClient
 //
-//  Created by Hau Nguyen on 17/01/2022.
+//  Created by HauNguyen on 29/03/2022.
+//  Source: https://www.fivestars.blog/articles/scrollview-offset/
 //
 
 import SwiftUI
 
-public struct ScrollViewOffsetNew<Content: View>: View {
-    let axes: Axis.Set
-    let showsIndicators: Bool
-    let offsetChanged: (CGPoint) -> Void
-    let content: Content
+struct ScrollViewOffsetNew<Content: View>: View {
+    let content: () -> Content
+    let onOffsetChange: (CGFloat) -> Void
     
     init(
-        axes: Axis.Set = .vertical,
-        showsIndicators: Bool = true,
-        offsetChanged: @escaping (CGPoint) -> Void = { _ in },
-        @ViewBuilder content: () -> Content
+        @ViewBuilder content: @escaping () -> Content,
+        onOffsetChange: @escaping (CGFloat) -> Void
     ) {
-        self.axes = axes
-        self.showsIndicators = showsIndicators
-        self.offsetChanged = offsetChanged
-        self.content = content()
+        self.content = content
+        self.onOffsetChange = onOffsetChange
     }
     
-    public var body: some View {
-        ScrollView(axes, showsIndicators: showsIndicators) {
-            GeometryReader { geometry in
-                Color.clear.preference(
-                    key: ScrollOffsetPreferenceKey.self,
-                    value: geometry.frame(in: .named("scrollView")).origin
-                )
-            }.frame(width: 0, height: 0)
-            content
-        }
-        .coordinateSpace(name: "scrollView")
-        .onPreferenceChange(ScrollOffsetPreferenceKey.self, perform: offsetChanged)
-    }
-}
-
-private struct ScrollOffsetPreferenceKey: PreferenceKey {
-    static var defaultValue: CGPoint = .zero
+    @State private var startOffset: CGFloat = 0
     
-    static func reduce(value: inout CGPoint, nextValue: () -> CGPoint) {}
-}
-
-struct ScrollViewOffsetNewPreview: View {
     var body: some View {
-        ScrollViewOffsetNew(
-            axes: [.horizontal, .vertical],
-            showsIndicators: false,
-            offsetChanged: { print($0) }
-        ) {
-            VStack(spacing: 10) {
-                ForEach(0..<100) { i in
-                    Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
-                        
-                }
-            }
-            .frame(maxWidth: UIScreen.main.bounds.width)
+        ScrollView(.vertical, showsIndicators: false) {
+            
+            content()
+                .overlay(
+                    offsetReader, alignment: .bottom
+                )
+            
+            Spacer()
         }
+        .coordinateSpace(name: "frameLayer")
+        .onPreferenceChange(OffsetPreferenceKey.self, perform: onOffsetChange)
     }
+    
+    var offsetReader: some View {
+        GeometryReader { proxy in
+            Color.clear
+                .preference(
+                    key: OffsetPreferenceKey.self,
+                    value: self.getOffset(proxy)
+                )
+        }
+        .frame(maxHeight: 0) // 👈🏻 make sure that the reader doesn't affect the content height
+    }
+    
+    func getOffset(_ proxy: GeometryProxy) -> CGFloat {
+        
+        let minY = proxy.frame(in: .named("frameLayer")).minY
+        
+        if self.startOffset == 0 {
+            DispatchQueue.main.async {
+                self.startOffset = minY
+            }
+        }
+        
+        let total = self.startOffset - minY
+        
+        return total
+    }
+}
+
+/// Contains the gap between the smallest value for the y-coordinate of
+/// the frame layer and the content layer.
+private struct OffsetPreferenceKey: PreferenceKey {
+    static var defaultValue: CGFloat = .zero
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {}
 }
