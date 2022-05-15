@@ -19,6 +19,7 @@
 		B232DA7227743D8D00D58DEC /* PinEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B232DA7127743D8D00D58DEC /* PinEntryView.swift */; };
 		B2341FD327E9A96500CE369E /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2341FD227E9A96500CE369E /* TrackableScrollView.swift */; };
 		B2341FD627E9A98800CE369E /* SwiftUITrackableScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = B2341FD527E9A98800CE369E /* SwiftUITrackableScrollView */; };
+		B23AFAD52830B0AC0043CFCE /* TableViewRepresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23AFAD42830B0AC0043CFCE /* TableViewRepresentableView.swift */; };
 		B23CA2342806D8BC00E90288 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = B23CA2332806D8BC00E90288 /* NukeUI */; };
 		B23CA2372806D8D700E90288 /* NukeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23CA2362806D8D700E90288 /* NukeDemo.swift */; };
 		B259777427857E6E00DA0FDE /* ParalaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259777327857E6E00DA0FDE /* ParalaxHeader.swift */; };
@@ -57,6 +58,7 @@
 		B232DA6F27741B6700D58DEC /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
 		B232DA7127743D8D00D58DEC /* PinEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinEntryView.swift; sourceTree = "<group>"; };
 		B2341FD227E9A96500CE369E /* TrackableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollView.swift; sourceTree = "<group>"; };
+		B23AFAD42830B0AC0043CFCE /* TableViewRepresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewRepresentableView.swift; sourceTree = "<group>"; };
 		B23CA2362806D8D700E90288 /* NukeDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NukeDemo.swift; sourceTree = "<group>"; };
 		B259777327857E6E00DA0FDE /* ParalaxHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParalaxHeader.swift; sourceTree = "<group>"; };
 		B2699318276C33470056D631 /* ZoomableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				B280F3E727957D0000C7F011 /* ScrollViewOffsetNew.swift */,
 				B2341FD227E9A96500CE369E /* TrackableScrollView.swift */,
 				B2E70D47282F5F0700A37B43 /* UITableViewRepresentableView.swift */,
+				B23AFAD42830B0AC0043CFCE /* TableViewRepresentableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				B232DA6E27741B5200D58DEC /* CustomNumberPad.swift in Sources */,
 				B2BF2CE427D9B45500C8695F /* ZoomableScrollViewPOD.swift in Sources */,
 				B259777427857E6E00DA0FDE /* ParalaxHeader.swift in Sources */,
+				B23AFAD52830B0AC0043CFCE /* TableViewRepresentableView.swift in Sources */,
 				B2C1F28D2786CBD500EE0005 /* ScrollViewOffset.swift in Sources */,
 				B280F3E827957D0000C7F011 /* ScrollViewOffsetNew.swift in Sources */,
 				B2271DD127F2BEB700FE4A60 /* DemoScrollViewOffset.swift in Sources */,
