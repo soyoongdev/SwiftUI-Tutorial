@@ -1,5 +1,5 @@
 //
-//  HalfSheet.swift
+//  HalfSheetModalView.swift
 //  ThietThachClient
 //
 //  Created by Hau Nguyen on 14/12/2021.
@@ -9,107 +9,207 @@ import UIKit
 import SwiftUI
 
 extension View {
-    func halfSheetModal<Content : View> (isPresented: Binding<Bool>, @ViewBuilder content : @escaping () -> Content, onEnd: @escaping () -> Void) -> some View {
-        // Why we use overlay...
-        // Because it will automatically use the swiftui frame size only..
-        return self.background(HalfSheetModal(isPresented: isPresented, content: content, onEnd: onEnd))
+    func halfSheetModal<Content:View>(isPresented: Binding<Bool>, prefersGrabberVisible: Bool? = false, detents: [UISheetPresentationController.Detent], firstDetent: UISheetPresentationController.Detent.Identifier? = .large, state: Binding<UISheetPresentationController.Detent.Identifier>? = nil, onDismiss: (() -> Void)? = nil, @ViewBuilder content: @escaping () -> Content) -> some View {
+        modifier(halfSheetViewModifier(isPresented: isPresented, prefersGrabberVisible: prefersGrabberVisible, detents: detents, firstDetent: firstDetent, state: state, onDismiss: onDismiss, swiftUIContent: content))
     }
 }
 
-struct HalfSheetModal<Content: View>: UIViewControllerRepresentable {
-    let content: Content
+// 1 - Create a UISheetPresentationController that can be used in a SwiftUI interface
+struct HalfSheetModal<Content: View>: UIViewRepresentable {
+    
     @Binding var isPresented: Bool
-    private let controller = UIViewController()
-    var onEnd: () -> Void
+    var firstDetent: UISheetPresentationController.Detent.Identifier? = .large
+    let detents: [UISheetPresentationController.Detent]
+    var prefersGrabberVisible: Bool? = false
+    var state: Binding<UISheetPresentationController.Detent.Identifier>?
+    let onDismiss: (() -> Void)?
+    let content: Content
+    @State private var getState: UISheetPresentationController.Detent.Identifier = .large
     
-    init(isPresented: Binding<Bool>, @ViewBuilder content: @escaping () -> Content, onEnd: @escaping () -> Void) {
+    init(isPresented: Binding<Bool>,
+         prefersGrabberVisible: Bool? = nil,
+         detents: [UISheetPresentationController.Detent] = [.medium()],
+         firstDetent: UISheetPresentationController.Detent.Identifier? = .large,
+         state: Binding<UISheetPresentationController.Detent.Identifier>? = nil,
+         onDismiss: (() -> Void)? = nil,
+         @ViewBuilder content: @escaping () -> Content)
+    {
         self._isPresented = isPresented
+        self.prefersGrabberVisible = prefersGrabberVisible
+        self.detents = detents
+        self.firstDetent = firstDetent
+        self.state = state
+        self.onDismiss = onDismiss
         self.content = content()
-        self.onEnd = onEnd
     }
     
-    func makeCoordinator() -> Coordinator {
-        Coordinator(parent: self)
+    func makeUIView(context: Context) -> UIView {
+        let view = UIView()
+        return view
     }
     
-    func makeUIViewController(context: Context) -> UIViewController {
-        controller.view.backgroundColor = .clear
+    func updateUIView(_ uiView: UIView, context: Context) {
         
-        return controller
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        // Create the UIViewController that will be presented by the UIButton
+        let vc = UIViewController()
+        
+        // Create the UIHostingController that will embed the SwiftUI View
+        let host = UIHostingController(rootView: content)
+        
+        // Add the UIHostingController to the UIViewController
+        vc.addChild(host)
+        vc.view.addSubview(host.view)
+        // Set constraints
+        host.view.translatesAutoresizingMaskIntoConstraints = false
+        host.view.leftAnchor.constraint(equalTo: vc.view.leftAnchor).isActive = true
+        host.view.topAnchor.constraint(equalTo: vc.view.topAnchor).isActive = true
+        host.view.rightAnchor.constraint(equalTo: vc.view.rightAnchor).isActive = true
+        host.view.bottomAnchor.constraint(equalTo: vc.view.bottomAnchor).isActive = true
+        host.didMove(toParent: vc)
+        
+        // Set the presentationController as a UISheetPresentationController
+        if let sheet = vc.presentationController as? UISheetPresentationController {
+            sheet.detents = detents
+            sheet.prefersGrabberVisible = self.prefersGrabberVisible!
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = true
+            sheet.largestUndimmedDetentIdentifier = .medium
+            sheet.selectedDetentIdentifier = self.firstDetent
+        }
+        
+        // Set the coordinator (delegate)
+        // We need the delegate to use the presentationControllerDidDismiss function
+        vc.presentationController?.delegate = context.coordinator
+        
+        
         if isPresented {
-            // Presenting Modal View..
-            let sheetController = CustomHostingController(rootView: content)
-            sheetController.presentationController?.delegate = context.coordinator
-            
-            uiViewController.present(sheetController, animated: true)
+            // Present the viewController
+            uiView.window?.rootViewController?.present(vc, animated: true)
         } else {
-            uiViewController.dismiss(animated: true)
-        }
-    }
-    
-    class CustomHostingController<Content : View> : UIHostingController<Content> {
-        
-        override func viewDidLoad() {
-            //view.backgroundColor = .clear
-            // Setting presentation controller properties...
-            if let presentationController = presentationController as? UISheetPresentationController {
-                presentationController.detents = [
-                    .medium(), .large()
-                ]
-                
-                // To show grab protion..
-                presentationController.prefersGrabberVisible = true
-            }
-        }
-    }
-    
-    // MARK : Coordinator
-    class Coordinator : NSObject, UISheetPresentationControllerDelegate {
-        init(parent: HalfSheetModal<Content>) {
-            self.parent = parent
+            // Dismiss the viewController
+            uiView.window?.rootViewController?.dismiss(animated: true)
         }
         
-        var parent : HalfSheetModal
+    }
+    
+    /* Creates the custom instance that you use to communicate changes
+     from your view controller to other parts of your SwiftUI interface.
+     */
+    func makeCoordinator() -> Coordinator {
+        Coordinator(isPresented: $isPresented, state: state, onDismiss: onDismiss)
+    }
+    
+    class Coordinator: NSObject, UISheetPresentationControllerDelegate {
+        @Binding var isPresented: Bool
+        let onDismiss: (() -> Void)?
+        var state: Binding<UISheetPresentationController.Detent.Identifier>?
+        
+        init(isPresented: Binding<Bool>,
+             state: Binding<UISheetPresentationController.Detent.Identifier>? = nil,
+             onDismiss: (() -> Void)? = nil)
+        {
+            self._isPresented = isPresented
+            self.state = state
+            self.onDismiss = onDismiss
+        }
         
         func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-            self.parent.isPresented = false
-            self.parent.onEnd()
+            self.isPresented = false
+            self.onDismiss?()
         }
         
+        func sheetPresentationControllerDidChangeSelectedDetentIdentifier(_ sheetPresentationController: UISheetPresentationController) {
+            self.state?.wrappedValue = sheetPresentationController.selectedDetentIdentifier ?? .large
+        }
+    }
+}
+
+// 2 - Create the SwiftUI modifier conforming to the ViewModifier protocol
+struct halfSheetViewModifier<SwiftUIContent : View>: ViewModifier {
+    
+    @Binding var isPresented: Bool
+    
+    var prefersGrabberVisible: Bool? = false
+    
+    var detents: [UISheetPresentationController.Detent] = [.medium(), .large()]
+    
+    var firstDetent: UISheetPresentationController.Detent.Identifier? = .large
+    
+    var state: Binding<UISheetPresentationController.Detent.Identifier>?
+    
+    let onDismiss: (() -> Void)?
+    
+    let swiftUIContent: SwiftUIContent
+    
+    init(isPresented: Binding<Bool>,
+         prefersGrabberVisible: Bool? = nil,
+         detents: [UISheetPresentationController.Detent],
+         firstDetent: UISheetPresentationController.Detent.Identifier? = .large,
+         state: Binding<UISheetPresentationController.Detent.Identifier>? = nil,
+         onDismiss: (() -> Void)? = nil,
+         @ViewBuilder swiftUIContent: @escaping () -> SwiftUIContent)
+    {
+        self._isPresented = isPresented
+        self.prefersGrabberVisible = prefersGrabberVisible
+        self.detents = detents
+        self.firstDetent = firstDetent
+        self.state = state
+        self.onDismiss = onDismiss
+        self.swiftUIContent = swiftUIContent()
+    }
+    
+    func body(content: Content) -> some View {
+        ZStack {
+            HalfSheetModal(isPresented: $isPresented, prefersGrabberVisible: prefersGrabberVisible, detents: detents, firstDetent: firstDetent, state: state, onDismiss: onDismiss) {
+                swiftUIContent
+            }
+            .fixedSize()
+            
+            content
+        }
     }
 }
 
 
-struct DemoSheet: View {
+// 4 - An example of how to use the sheetWithDetents modifier
+struct DemoHalfSheetModal: View {
     @State var isPresented: Bool = false
+    @State var state: UISheetPresentationController.Detent.Identifier = .medium
     
     var body: some View {
         ZStack {
-            
-            Button(action: {
-                self.isPresented.toggle()
-            }) {
-                Text("Click me!")
+            Color.pink
+                .ignoresSafeArea()
+            Button {
+                isPresented.toggle()
+            } label: {
+                VStack {
+                    Text("Tap me!")
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(20)
+                }
+                .onChange(of: self.state) { _ in
+                    print("\(self.state.rawValue)")
+                }
             }
-            
-        }
-        .halfSheetModal(isPresented: $isPresented) {
-            Button(action: {
-                self.isPresented.toggle()
-            }) {
-                Text("Dismiss")
+            .halfSheetModal(isPresented: $isPresented, prefersGrabberVisible: true
+                            , detents: [.medium(), .large()], state: $state, onDismiss: onDismiss) {
+                VStack {
+                    Text("SwiftUI Content ")
+                        .bold()
+                        .font(.title)
+                }
             }
-        } onEnd: {
-            print("Disissed")
         }
+    }
+    
+    func onDismiss() {
+        print("The sheet has been dismissed")
     }
 }
 
-struct CustomSheetView_Previews: PreviewProvider {
+struct HalfSheetModal_Previews: PreviewProvider {
     static var previews: some View {
-        DemoSheet()
+        DemoHalfSheetModal()
     }
 }
