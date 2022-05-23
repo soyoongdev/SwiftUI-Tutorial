@@ -19,7 +19,6 @@
 		B232DA7227743D8D00D58DEC /* PinEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B232DA7127743D8D00D58DEC /* PinEntryView.swift */; };
 		B2341FD327E9A96500CE369E /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2341FD227E9A96500CE369E /* TrackableScrollView.swift */; };
 		B2341FD627E9A98800CE369E /* SwiftUITrackableScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = B2341FD527E9A98800CE369E /* SwiftUITrackableScrollView */; };
-		B23AFAD72830D2E40043CFCE /* UIList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23AFAD62830D2E30043CFCE /* UIList.swift */; };
 		B23AFAE92830E3C80043CFCE /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23AFAE82830E3C80043CFCE /* UserRow.swift */; };
 		B23AFAEB2830E3DE0043CFCE /* ViewLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23AFAEA2830E3DE0043CFCE /* ViewLoader.swift */; };
 		B23AFAEE2830E4200043CFCE /* GithubAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23AFAED2830E4200043CFCE /* GithubAPIManager.swift */; };
@@ -37,6 +36,7 @@
 		B277A0552784065200A88380 /* AsyncImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277A0542784065200A88380 /* AsyncImageViewController.swift */; };
 		B280F3E827957D0000C7F011 /* ScrollViewOffsetNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B280F3E727957D0000C7F011 /* ScrollViewOffsetNew.swift */; };
 		B29201AD2796AB6E00226F93 /* SliderRange2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29201AC2796AB6E00226F93 /* SliderRange2.swift */; };
+		B2A63D4C283B96EB00B9A346 /* AlertWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A63D4B283B96EB00B9A346 /* AlertWrapper.swift */; };
 		B2B50402279CA6EA00D22726 /* SliderRangeSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B2B50401279CA6EA00D22726 /* SliderRangeSwiftUI */; };
 		B2BF2CE127D9A79500C8695F /* ImageNew2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF2CE027D9A79500C8695F /* ImageNew2.swift */; };
 		B2BF2CE427D9B45500C8695F /* ZoomableScrollViewPOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF2CE327D9B45500C8695F /* ZoomableScrollViewPOD.swift */; };
@@ -64,7 +64,6 @@
 		B232DA6F27741B6700D58DEC /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
 		B232DA7127743D8D00D58DEC /* PinEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinEntryView.swift; sourceTree = "<group>"; };
 		B2341FD227E9A96500CE369E /* TrackableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollView.swift; sourceTree = "<group>"; };
-		B23AFAD62830D2E30043CFCE /* UIList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIList.swift; sourceTree = "<group>"; };
 		B23AFAE82830E3C80043CFCE /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
 		B23AFAEA2830E3DE0043CFCE /* ViewLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLoader.swift; sourceTree = "<group>"; };
 		B23AFAED2830E4200043CFCE /* GithubAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIManager.swift; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		B277A0542784065200A88380 /* AsyncImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageViewController.swift; sourceTree = "<group>"; };
 		B280F3E727957D0000C7F011 /* ScrollViewOffsetNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetNew.swift; sourceTree = "<group>"; };
 		B29201AC2796AB6E00226F93 /* SliderRange2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderRange2.swift; sourceTree = "<group>"; };
+		B2A63D4B283B96EB00B9A346 /* AlertWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWrapper.swift; sourceTree = "<group>"; };
 		B2BF2CE027D9A79500C8695F /* ImageNew2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNew2.swift; sourceTree = "<group>"; };
 		B2BF2CE327D9B45500C8695F /* ZoomableScrollViewPOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollViewPOD.swift; sourceTree = "<group>"; };
 		B2C118AE2770829400F84CF0 /* RefreshableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableScrollView.swift; sourceTree = "<group>"; };
@@ -231,6 +231,14 @@
 			path = AsyncImageView;
 			sourceTree = "<group>";
 		};
+		B2A63D4A283B96C100B9A346 /* CustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				B2A63D4B283B96EB00B9A346 /* AlertWrapper.swift */,
+			);
+			path = CustomAlertView;
+			sourceTree = "<group>";
+		};
 		B2C118AD277081B100F84CF0 /* RefreshbleScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +287,7 @@
 		B2C557472769C9B70016EF53 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B2A63D4A283B96C100B9A346 /* CustomAlertView */,
 				B24329E32833F9BE0034B6D5 /* HalfSheet */,
 				B23AFAEC2830E4040043CFCE /* Network */,
 				B23AFADF2830E3330043CFCE /* Component */,
@@ -301,7 +310,6 @@
 				B280F3E727957D0000C7F011 /* ScrollViewOffsetNew.swift */,
 				B2341FD227E9A96500CE369E /* TrackableScrollView.swift */,
 				B2E70D47282F5F0700A37B43 /* UITableViewRepresentableView.swift */,
-				B23AFAD62830D2E30043CFCE /* UIList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -410,7 +418,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B23AFAD72830D2E40043CFCE /* UIList.swift in Sources */,
 				B2ED86392769D34D00612F0D /* ImageViews.swift in Sources */,
 				B29201AD2796AB6E00226F93 /* SliderRange2.swift in Sources */,
 				B277A0552784065200A88380 /* AsyncImageViewController.swift in Sources */,
@@ -435,6 +442,7 @@
 				B269EB5A278BE0B20086DE40 /* SliderRange3.swift in Sources */,
 				B2C557392769C9720016EF53 /* SwiftUI_TutorialApp.swift in Sources */,
 				B2C557492769C9FA0016EF53 /* UIKitConvertableSwiftUIPresentable.swift in Sources */,
+				B2A63D4C283B96EB00B9A346 /* AlertWrapper.swift in Sources */,
 				B2699319276C33470056D631 /* ZoomableScrollView.swift in Sources */,
 				B269EB56278BD0DE0086DE40 /* SliderRangeView.swift in Sources */,
 				B20BE7FB27DB5E47009CCB6B /* TextFieldAutoFocused.swift in Sources */,
