@@ -52,6 +52,8 @@
 		B2E70D48282F5F0700A37B43 /* UITableViewRepresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E70D47282F5F0700A37B43 /* UITableViewRepresentableView.swift */; };
 		B2EC0117283DD37C00951969 /* HashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC0116283DD37C00951969 /* HashTagView.swift */; };
 		B2EC0119283DD5D200951969 /* HashTag2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC0118283DD5D200951969 /* HashTag2.swift */; };
+		B2EC0120283E1E0300951969 /* TextLabelWithHyperLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC011F283E1E0300951969 /* TextLabelWithHyperLink.swift */; };
+		B2EC0122283E200500951969 /* TextLabelWithHyperLink2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC0121283E200500951969 /* TextLabelWithHyperLink2.swift */; };
 		B2ED86392769D34D00612F0D /* ImageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED86382769D34D00612F0D /* ImageViews.swift */; };
 		B2ED863B2769D3A700612F0D /* ImageViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED863A2769D3A700612F0D /* ImageViewPresentable.swift */; };
 		B2ED863F2769D61500612F0D /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED863E2769D61500612F0D /* ImageViewController.swift */; };
@@ -99,6 +101,8 @@
 		B2E70D47282F5F0700A37B43 /* UITableViewRepresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRepresentableView.swift; sourceTree = "<group>"; };
 		B2EC0116283DD37C00951969 /* HashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagView.swift; sourceTree = "<group>"; };
 		B2EC0118283DD5D200951969 /* HashTag2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTag2.swift; sourceTree = "<group>"; };
+		B2EC011F283E1E0300951969 /* TextLabelWithHyperLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabelWithHyperLink.swift; sourceTree = "<group>"; };
+		B2EC0121283E200500951969 /* TextLabelWithHyperLink2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabelWithHyperLink2.swift; sourceTree = "<group>"; };
 		B2ED86382769D34D00612F0D /* ImageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViews.swift; sourceTree = "<group>"; };
 		B2ED863A2769D3A700612F0D /* ImageViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewPresentable.swift; sourceTree = "<group>"; };
 		B2ED863E2769D61500612F0D /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
@@ -330,6 +334,8 @@
 			children = (
 				B2EC0116283DD37C00951969 /* HashTagView.swift */,
 				B2EC0118283DD5D200951969 /* HashTag2.swift */,
+				B2EC011F283E1E0300951969 /* TextLabelWithHyperLink.swift */,
+				B2EC0121283E200500951969 /* TextLabelWithHyperLink2.swift */,
 			);
 			path = HashTag;
 			sourceTree = "<group>";
@@ -457,6 +463,7 @@
 				B2271DD127F2BEB700FE4A60 /* DemoScrollViewOffset.swift in Sources */,
 				B269EB58278BD0F10086DE40 /* SliderRangeController.swift in Sources */,
 				B20B6A74279905AF0041C866 /* SliderRange4.swift in Sources */,
+				B2EC0122283E200500951969 /* TextLabelWithHyperLink2.swift in Sources */,
 				B2ED863B2769D3A700612F0D /* ImageViewPresentable.swift in Sources */,
 				B23AFAF02830E4350043CFCE /* User.swift in Sources */,
 				B23AFAE92830E3C80043CFCE /* UserRow.swift in Sources */,
@@ -470,6 +477,7 @@
 				B269EB56278BD0DE0086DE40 /* SliderRangeView.swift in Sources */,
 				B20BE7FB27DB5E47009CCB6B /* TextFieldAutoFocused.swift in Sources */,
 				B23AFAEE2830E4200043CFCE /* GithubAPIManager.swift in Sources */,
+				B2EC0120283E1E0300951969 /* TextLabelWithHyperLink.swift in Sources */,
 				B2C1CAA827EC306C00CCA014 /* InputViewFocussed.swift in Sources */,
 				B2BF2CE127D9A79500C8695F /* ImageNew2.swift in Sources */,
 				B23AFAEB2830E3DE0043CFCE /* ViewLoader.swift in Sources */,

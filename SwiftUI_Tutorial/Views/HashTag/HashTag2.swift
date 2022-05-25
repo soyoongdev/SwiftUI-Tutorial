@@ -3,6 +3,8 @@
 //  SwiftUI_Tutorial
 //
 //  Created by HauNguyen on 25/05/2022.
+//  Link example at: https://stackoverflow.com/questions/59624838/swiftui-tappable-subtext
+
 //
 
 import SwiftUI
@@ -31,18 +33,26 @@ struct TagDisplay: Codable, Identifiable {
 }
 
 struct HashTag2: View {
-    @State var sheet: TagDisplay? = nil
-    @Binding var partList: [MentionPartViewModel]
-    @Binding var hashTagList: [String]
+    @Binding var data: [MentionPartViewModel]
+    @State private var sheet: TagDisplay? = nil
+    @State private var hashTagList = [String]()
+    @State private var string: String = ""
+    
+    func font(_ string: String) -> Font {
+        self.hashTagList.contains(string) ? .title2 : .body
+    }
     
     func fontWeight(_ string: String) -> Font.Weight {
-        hashTagList.contains(string) ? .bold : .regular
+        self.hashTagList.contains(string) ? .bold : .regular
     }
 
     var body: some View {
         GeometryReader { geo in
-            ZStack {
+            VStack {
                 createText(maxWidth: geo.size.width)
+                
+                Text("\(self.hashTagList.description)")
+                
             }
         }
         .frame(maxWidth: .infinity)
@@ -51,21 +61,21 @@ struct HashTag2: View {
                 .font(.title2)
                 .foregroundColor(.red)
         }
-    }
-    
-    var partLast: MentionPartViewModel {
-        return partList[(partList.count - 1)]
+        .onAppear() {
+            self.getHashTagList()
+        }
     }
     
     func createText(maxWidth: CGFloat) -> some View {
         var width = CGFloat.zero
-        var height = CGFloat.zero        
+        var height = CGFloat.zero
+        let stringArray = string.components(separatedBy: " ")
         
-        return VStack(alignment: .leading) {
-            ForEach(partList, id: \.userId) { item in
-                Text(item.displayText + " ")
-                    .font(.body)
-                    .fontWeight(fontWeight(item.displayText))
+        return ZStack(alignment: .topLeading) {
+            ForEach(stringArray, id: \.self) { item in
+                Text(item + " ")
+                    .font(font(item))
+                    .fontWeight(fontWeight(item))
                     .onTapGesture { showSheet(item) }
                     .alignmentGuide(.leading, computeValue: { dimension in
                         if (abs(width - dimension.width) > maxWidth) {
@@ -74,7 +84,7 @@ struct HashTag2: View {
                         }
                         
                         let result = width
-                        if partLast.displayText == item.displayText {
+                        if item == stringArray.last {
                             width = 0
                         }
                         else {
@@ -85,7 +95,7 @@ struct HashTag2: View {
                     })
                     .alignmentGuide(.top, computeValue: { dimension in
                         let result = height
-                        if partLast.displayText == partList[0].displayText { height = 0 }
+                        if item == stringArray.last { height = 0 }
                         return result
                     })
                     .multilineTextAlignment(.leading)
@@ -94,16 +104,29 @@ struct HashTag2: View {
         .frame(maxWidth: .infinity, alignment: .topLeading)
     }
     
-    func showSheet(_ part: MentionPartViewModel) {
-        if hashTagList.contains(part.displayText) {
-            self.sheet = TagDisplay(part)
+    func getHashTagList() {
+        self.hashTagList.removeAll()
+        self.string = ""
+        for item in self.data {
+            self.string += item.displayText
+            if item.type == .MENTION {
+                self.hashTagList.append(item.displayText)
+            }
+        }
+        
+    }
+    
+    func showSheet(_ s: String) {
+        let index = self.data.firstIndex(where: {$0.displayText == s}) ?? 0
+        if hashTagList.contains(s) {
+            self.sheet = TagDisplay(self.data[index])
         }
     }
 }
 
 struct DemoHashTag: View {
     @State var partList: [MentionPartViewModel] = [
-        MentionPartViewModel(type: .TEXT, displayText: "Hello my name is Hau, my hashtag is  ", userId: 0),
+        MentionPartViewModel(type: .TEXT, displayText: "Hello my name is Hau, my hashtag is ", userId: 0),
         MentionPartViewModel(type: .MENTION, displayText: "@NGUYEN HUU HAU", userId: 1),
         MentionPartViewModel(type: .TEXT, displayText: ". There are four people in my family, My father, my mother, my sister and me. My father's hashtag is ", userId: 2),
         MentionPartViewModel(type: .MENTION, displayText: "@Hai", userId: 3),
@@ -112,11 +135,9 @@ struct DemoHashTag: View {
         MentionPartViewModel(type: .TEXT, displayText: ", my siter's hashtag is ", userId: 6),
         MentionPartViewModel(type: .MENTION, displayText: "@Ngoc", userId: 7)
     ]
-    
-    @State var hashTagList: [String] = ["@Hai", "@Cuong", "@Ngoc", "@NGUYEN HUU HAU"]
-    
+        
     var body: some View {
-        HashTag2(partList: $partList, hashTagList: $hashTagList)
+        HashTag2(data: $partList)
     }
 }
 
