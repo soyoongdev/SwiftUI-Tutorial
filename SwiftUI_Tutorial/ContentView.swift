@@ -11,7 +11,9 @@ struct ContentView: View {
 
     var body : some View {
         //DemoScrollViewOffset()
-        ContentViewAlertWrapper()
+        //ContentViewAlertWrapper()
+        //HashTagView()
+        DemoHashTag()
     }
     
 }
