@@ -36,7 +36,6 @@
 		B277A0552784065200A88380 /* AsyncImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277A0542784065200A88380 /* AsyncImageViewController.swift */; };
 		B280F3E827957D0000C7F011 /* ScrollViewOffsetNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B280F3E727957D0000C7F011 /* ScrollViewOffsetNew.swift */; };
 		B29201AD2796AB6E00226F93 /* SliderRange2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29201AC2796AB6E00226F93 /* SliderRange2.swift */; };
-		B2A63D4C283B96EB00B9A346 /* AlertWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A63D4B283B96EB00B9A346 /* AlertWrapper.swift */; };
 		B2B50402279CA6EA00D22726 /* SliderRangeSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B2B50401279CA6EA00D22726 /* SliderRangeSwiftUI */; };
 		B2BF2CE127D9A79500C8695F /* ImageNew2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF2CE027D9A79500C8695F /* ImageNew2.swift */; };
 		B2BF2CE427D9B45500C8695F /* ZoomableScrollViewPOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF2CE327D9B45500C8695F /* ZoomableScrollViewPOD.swift */; };
@@ -53,7 +52,8 @@
 		B2EC0117283DD37C00951969 /* HashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC0116283DD37C00951969 /* HashTagView.swift */; };
 		B2EC0119283DD5D200951969 /* HashTag2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC0118283DD5D200951969 /* HashTag2.swift */; };
 		B2EC0120283E1E0300951969 /* TextLabelWithHyperLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC011F283E1E0300951969 /* TextLabelWithHyperLink.swift */; };
-		B2EC0122283E200500951969 /* TextLabelWithHyperLink2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC0121283E200500951969 /* TextLabelWithHyperLink2.swift */; };
+		B2EC0129283E32C300951969 /* ActiveLabel in Frameworks */ = {isa = PBXBuildFile; productRef = B2EC0128283E32C300951969 /* ActiveLabel */; };
+		B2EC012B283E33DC00951969 /* ActiveLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC012A283E33DC00951969 /* ActiveLabelView.swift */; };
 		B2ED86392769D34D00612F0D /* ImageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED86382769D34D00612F0D /* ImageViews.swift */; };
 		B2ED863B2769D3A700612F0D /* ImageViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED863A2769D3A700612F0D /* ImageViewPresentable.swift */; };
 		B2ED863F2769D61500612F0D /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED863E2769D61500612F0D /* ImageViewController.swift */; };
@@ -84,7 +84,6 @@
 		B277A0542784065200A88380 /* AsyncImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageViewController.swift; sourceTree = "<group>"; };
 		B280F3E727957D0000C7F011 /* ScrollViewOffsetNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetNew.swift; sourceTree = "<group>"; };
 		B29201AC2796AB6E00226F93 /* SliderRange2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderRange2.swift; sourceTree = "<group>"; };
-		B2A63D4B283B96EB00B9A346 /* AlertWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWrapper.swift; sourceTree = "<group>"; };
 		B2BF2CE027D9A79500C8695F /* ImageNew2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNew2.swift; sourceTree = "<group>"; };
 		B2BF2CE327D9B45500C8695F /* ZoomableScrollViewPOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollViewPOD.swift; sourceTree = "<group>"; };
 		B2C118AE2770829400F84CF0 /* RefreshableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableScrollView.swift; sourceTree = "<group>"; };
@@ -102,7 +101,7 @@
 		B2EC0116283DD37C00951969 /* HashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagView.swift; sourceTree = "<group>"; };
 		B2EC0118283DD5D200951969 /* HashTag2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTag2.swift; sourceTree = "<group>"; };
 		B2EC011F283E1E0300951969 /* TextLabelWithHyperLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabelWithHyperLink.swift; sourceTree = "<group>"; };
-		B2EC0121283E200500951969 /* TextLabelWithHyperLink2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabelWithHyperLink2.swift; sourceTree = "<group>"; };
+		B2EC012A283E33DC00951969 /* ActiveLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveLabelView.swift; sourceTree = "<group>"; };
 		B2ED86382769D34D00612F0D /* ImageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViews.swift; sourceTree = "<group>"; };
 		B2ED863A2769D3A700612F0D /* ImageViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewPresentable.swift; sourceTree = "<group>"; };
 		B2ED863E2769D61500612F0D /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +116,7 @@
 				B2341FD627E9A98800CE369E /* SwiftUITrackableScrollView in Frameworks */,
 				B2B50402279CA6EA00D22726 /* SliderRangeSwiftUI in Frameworks */,
 				B23CA2342806D8BC00E90288 /* NukeUI in Frameworks */,
+				B2EC0129283E32C300951969 /* ActiveLabel in Frameworks */,
 				B21A48C82779AD6A001FEC1D /* SwiftUIPullToRefresh in Frameworks */,
 				B21A48C32779A2B5001FEC1D /* SwiftUIRefresh in Frameworks */,
 			);
@@ -239,14 +239,6 @@
 			path = AsyncImageView;
 			sourceTree = "<group>";
 		};
-		B2A63D4A283B96C100B9A346 /* CustomAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				B2A63D4B283B96EB00B9A346 /* AlertWrapper.swift */,
-			);
-			path = CustomAlertView;
-			sourceTree = "<group>";
-		};
 		B2C118AD277081B100F84CF0 /* RefreshbleScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,7 +289,6 @@
 			children = (
 				B2EC0115283DD35D00951969 /* HashTag */,
 				B2EC0114283DD34400951969 /* UIRepresentableView */,
-				B2A63D4A283B96C100B9A346 /* CustomAlertView */,
 				B24329E32833F9BE0034B6D5 /* HalfSheet */,
 				B23AFAEC2830E4040043CFCE /* Network */,
 				B23AFADF2830E3330043CFCE /* Component */,
@@ -335,7 +326,7 @@
 				B2EC0116283DD37C00951969 /* HashTagView.swift */,
 				B2EC0118283DD5D200951969 /* HashTag2.swift */,
 				B2EC011F283E1E0300951969 /* TextLabelWithHyperLink.swift */,
-				B2EC0121283E200500951969 /* TextLabelWithHyperLink2.swift */,
+				B2EC012A283E33DC00951969 /* ActiveLabelView.swift */,
 			);
 			path = HashTag;
 			sourceTree = "<group>";
@@ -384,6 +375,7 @@
 				B2B50401279CA6EA00D22726 /* SliderRangeSwiftUI */,
 				B2341FD527E9A98800CE369E /* SwiftUITrackableScrollView */,
 				B23CA2332806D8BC00E90288 /* NukeUI */,
+				B2EC0128283E32C300951969 /* ActiveLabel */,
 			);
 			productName = SwiftUI_Tutorial;
 			productReference = B2C557352769C9720016EF53 /* SwiftUI_Tutorial.app */;
@@ -419,6 +411,7 @@
 				B2B50400279CA6EA00D22726 /* XCRemoteSwiftPackageReference "SliderRangeSwiftUI" */,
 				B2341FD427E9A98800CE369E /* XCRemoteSwiftPackageReference "trackable-scroll-view" */,
 				B23CA2322806D8BC00E90288 /* XCRemoteSwiftPackageReference "NukeUI" */,
+				B2EC0127283E32C300951969 /* XCRemoteSwiftPackageReference "ActiveLabel.swift" */,
 			);
 			productRefGroup = B2C557362769C9720016EF53 /* Products */;
 			projectDirPath = "";
@@ -463,7 +456,6 @@
 				B2271DD127F2BEB700FE4A60 /* DemoScrollViewOffset.swift in Sources */,
 				B269EB58278BD0F10086DE40 /* SliderRangeController.swift in Sources */,
 				B20B6A74279905AF0041C866 /* SliderRange4.swift in Sources */,
-				B2EC0122283E200500951969 /* TextLabelWithHyperLink2.swift in Sources */,
 				B2ED863B2769D3A700612F0D /* ImageViewPresentable.swift in Sources */,
 				B23AFAF02830E4350043CFCE /* User.swift in Sources */,
 				B23AFAE92830E3C80043CFCE /* UserRow.swift in Sources */,
@@ -472,7 +464,6 @@
 				B269EB5A278BE0B20086DE40 /* SliderRange3.swift in Sources */,
 				B2C557392769C9720016EF53 /* SwiftUI_TutorialApp.swift in Sources */,
 				B2C557492769C9FA0016EF53 /* UIKitConvertableSwiftUIPresentable.swift in Sources */,
-				B2A63D4C283B96EB00B9A346 /* AlertWrapper.swift in Sources */,
 				B2699319276C33470056D631 /* ZoomableScrollView.swift in Sources */,
 				B269EB56278BD0DE0086DE40 /* SliderRangeView.swift in Sources */,
 				B20BE7FB27DB5E47009CCB6B /* TextFieldAutoFocused.swift in Sources */,
@@ -488,6 +479,7 @@
 				B232DA7227743D8D00D58DEC /* PinEntryView.swift in Sources */,
 				B2341FD327E9A96500CE369E /* TrackableScrollView.swift in Sources */,
 				B232DA7027741B6700D58DEC /* VerificationView.swift in Sources */,
+				B2EC012B283E33DC00951969 /* ActiveLabelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +718,14 @@
 				kind = branch;
 			};
 		};
+		B2EC0127283E32C300951969 /* XCRemoteSwiftPackageReference "ActiveLabel.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/optonaut/ActiveLabel.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -758,6 +758,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B2B50400279CA6EA00D22726 /* XCRemoteSwiftPackageReference "SliderRangeSwiftUI" */;
 			productName = SliderRangeSwiftUI;
+		};
+		B2EC0128283E32C300951969 /* ActiveLabel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2EC0127283E32C300951969 /* XCRemoteSwiftPackageReference "ActiveLabel.swift" */;
+			productName = ActiveLabel;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

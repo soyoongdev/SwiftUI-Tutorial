@@ -1,88 +1,95 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Gifu",
-        "repositoryURL": "https://github.com/kaishin/Gifu",
-        "state": {
-          "branch": null,
-          "revision": "51f2eab32903e336f590c013267cfa4d7f8b06c4",
-          "version": "3.3.1"
-        }
-      },
-      {
-        "package": "Nuke",
-        "repositoryURL": "https://github.com/kean/Nuke.git",
-        "state": {
-          "branch": null,
-          "revision": "78fa963b8491fc520791d8c2a509f1b8593d8aae",
-          "version": "10.7.1"
-        }
-      },
-      {
-        "package": "NukeUI",
-        "repositoryURL": "https://github.com/kean/NukeUI.git",
-        "state": {
-          "branch": null,
-          "revision": "17f26c07e6b1d3b9258287f99f528111fcd7b7ad",
-          "version": "0.8.1"
-        }
-      },
-      {
-        "package": "SliderRangeSwiftUI",
-        "repositoryURL": "https://github.com/AnthonyCode274/SliderRangeSwiftUI.git",
-        "state": {
-          "branch": "main",
-          "revision": "7c72a95563a67ff37132230ae12c1cad103ebe47",
-          "version": null
-        }
-      },
-      {
-        "package": "Sliders",
-        "repositoryURL": "https://github.com/moridaffy/sliders-backup.git",
-        "state": {
-          "branch": "master",
-          "revision": "9509587c706d3d079be6e620b4c4d68316558c9b",
-          "version": null
-        }
-      },
-      {
-        "package": "Introspect",
-        "repositoryURL": "https://github.com/siteline/SwiftUI-Introspect.git",
-        "state": {
-          "branch": null,
-          "revision": "2e09be8af614401bc9f87d40093ec19ce56ccaf2",
-          "version": "0.1.3"
-        }
-      },
-      {
-        "package": "SwiftUIPullToRefresh",
-        "repositoryURL": "https://github.com/phuhuynh2411/SwiftUI-PullToRefresh.git",
-        "state": {
-          "branch": null,
-          "revision": "20d4652902625a2a3563e57c06368a95be73df18",
-          "version": "1.0.6"
-        }
-      },
-      {
-        "package": "SwiftUIRefresh",
-        "repositoryURL": "https://github.com/siteline/SwiftUIRefresh.git",
-        "state": {
-          "branch": null,
-          "revision": "fa8fac7b5eb5c729983a8bef65f094b5e0d12014",
-          "version": "0.0.3"
-        }
-      },
-      {
-        "package": "SwiftUITrackableScrollView",
-        "repositoryURL": "https://github.com/maxnatchanon/trackable-scroll-view.git",
-        "state": {
-          "branch": "master",
-          "revision": "4b094575c2370c3341d0b377a27b46bda4f937f7",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "activelabel.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/optonaut/ActiveLabel.swift.git",
+      "state" : {
+        "revision" : "36949c1a69ef8b40574da20c9e24b115f387b1cf",
+        "version" : "1.1.5"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "gifu",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kaishin/Gifu",
+      "state" : {
+        "revision" : "51f2eab32903e336f590c013267cfa4d7f8b06c4",
+        "version" : "3.3.1"
+      }
+    },
+    {
+      "identity" : "nuke",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/Nuke.git",
+      "state" : {
+        "revision" : "78fa963b8491fc520791d8c2a509f1b8593d8aae",
+        "version" : "10.7.1"
+      }
+    },
+    {
+      "identity" : "nukeui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/NukeUI.git",
+      "state" : {
+        "revision" : "17f26c07e6b1d3b9258287f99f528111fcd7b7ad",
+        "version" : "0.8.1"
+      }
+    },
+    {
+      "identity" : "sliderrangeswiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AnthonyCode274/SliderRangeSwiftUI.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7c72a95563a67ff37132230ae12c1cad103ebe47"
+      }
+    },
+    {
+      "identity" : "sliders-backup",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/moridaffy/sliders-backup.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "9509587c706d3d079be6e620b4c4d68316558c9b"
+      }
+    },
+    {
+      "identity" : "swiftui-introspect",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/siteline/SwiftUI-Introspect.git",
+      "state" : {
+        "revision" : "2e09be8af614401bc9f87d40093ec19ce56ccaf2",
+        "version" : "0.1.3"
+      }
+    },
+    {
+      "identity" : "swiftui-pulltorefresh",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/phuhuynh2411/SwiftUI-PullToRefresh.git",
+      "state" : {
+        "revision" : "20d4652902625a2a3563e57c06368a95be73df18",
+        "version" : "1.0.6"
+      }
+    },
+    {
+      "identity" : "swiftuirefresh",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/siteline/SwiftUIRefresh.git",
+      "state" : {
+        "revision" : "fa8fac7b5eb5c729983a8bef65f094b5e0d12014",
+        "version" : "0.0.3"
+      }
+    },
+    {
+      "identity" : "trackable-scroll-view",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/maxnatchanon/trackable-scroll-view.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "4b094575c2370c3341d0b377a27b46bda4f937f7"
+      }
+    }
+  ],
+  "version" : 2
 }

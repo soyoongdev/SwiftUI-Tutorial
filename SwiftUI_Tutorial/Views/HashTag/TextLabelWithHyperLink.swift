@@ -39,8 +39,7 @@ struct TextLabelWithHyperLink: UIViewRepresentable {
         textView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         textView.isEditable = false
         textView.isSelectable = true
-        textView.tintColor = UIColor(.red)
-        textView.font = UIFont.boldSystemFont(ofSize: 20)
+        textView.font = UIFont.systemFont(ofSize: 24)
         textView.tintColor = self.tintColor
         textView.delegate = context.coordinator
         textView.isScrollEnabled = false
@@ -118,24 +117,33 @@ struct HyperLinkItem: Hashable {
 }
 
 struct DemoTextLabelWithHyperLink: View {
+    @State var string: String = "Please contact us by filling contact form. We will contact with you shortly.  Your request will be processed in accordance with the Terms of Use and Privacy Policy."
     @State var sheetItem: String = ""
+    @State var hyperLinkItem: [HyperLinkItem] = [
+        HyperLinkItem(subText: "processed", attributes: [:]),
+        HyperLinkItem(subText: "Terms of Use", attributes: [:]),
+        HyperLinkItem(subText: "contact", attributes: [:])
+    ]
     
     var body: some View {
         VStack {
-            TextLabelWithHyperLink(
-                tintColor: .blue,
-                string: "Please contact us by filling contact form. We will contact with you shortly.  Your request will be processed in accordance with the Terms of Use and Privacy Policy.",
-                attributes: [:],
-                hyperLinkItems: [
-                    .init(subText: "processed"),
-                    .init(subText: "Terms of Use"),
-                ],
-                openLink: {
-                    (tappedItem) in
-                    print("Tapped link: \(tappedItem.subText)")
-                    self.sheetItem = tappedItem.subText
-                }
-            )
+//            TextLabelWithHyperLink(
+//                tintColor: .blue,
+//                string: "Please contact us by filling contact form. We will contact with you shortly.  Your request will be processed in accordance with the Terms of Use and Privacy Policy.",
+//                attributes: [:],
+//                hyperLinkItems: [
+//                    .init(subText: "processed"),
+//                    .init(subText: "Terms of Use"),
+//                ],
+//                openLink: {
+//                    (tappedItem) in
+//                    print("Tapped link: \(tappedItem.subText)")
+//                    self.sheetItem = tappedItem.subText
+//                }
+//            )
+            TextLabelWithHyperLink(tintColor: .red, string: string, attributes: [:], hyperLinkItems: Set(hyperLinkItem)) { (tapped) in
+                self.sheetItem = tapped.subText
+            }
             
             Text(sheetItem.description)
                 .font(.title2)
