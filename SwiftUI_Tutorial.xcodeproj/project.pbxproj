@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B20500312852313D00D2F3B0 /* AsynchronousImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20500302852313D00D2F3B0 /* AsynchronousImageView.swift */; };
+		B20500342852319C00D2F3B0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20500332852319C00D2F3B0 /* Extensions.swift */; };
 		B20B6A722799058E0041C866 /* Sliders in Frameworks */ = {isa = PBXBuildFile; productRef = B20B6A712799058E0041C866 /* Sliders */; };
 		B20B6A74279905AF0041C866 /* SliderRange4.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20B6A73279905AF0041C866 /* SliderRange4.swift */; };
 		B20BE7FB27DB5E47009CCB6B /* TextFieldAutoFocused.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20BE7FA27DB5E47009CCB6B /* TextFieldAutoFocused.swift */; };
 		B210F78B28520A0F002B6AFB /* ZoomableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210F78A28520A0F002B6AFB /* ZoomableImageView.swift */; };
 		B210F78D28520B9A002B6AFB /* 225H.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B210F78C28520B9A002B6AFB /* 225H.jpg */; };
 		B215578E2775AAE5005FDA24 /* LoadMoreScrolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B215578D2775AAE5005FDA24 /* LoadMoreScrolView.swift */; };
+		B218EAF92852EB8F00040930 /* ZoomableImageViewOriginal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B218EAF82852EB8F00040930 /* ZoomableImageViewOriginal.swift */; };
 		B21A48C32779A2B5001FEC1D /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = B21A48C22779A2B5001FEC1D /* SwiftUIRefresh */; };
 		B21A48C82779AD6A001FEC1D /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = B21A48C72779AD6A001FEC1D /* SwiftUIPullToRefresh */; };
 		B2271DD127F2BEB700FE4A60 /* DemoScrollViewOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2271DD027F2BEB700FE4A60 /* DemoScrollViewOffset.swift */; };
@@ -62,11 +65,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B20500302852313D00D2F3B0 /* AsynchronousImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynchronousImageView.swift; sourceTree = "<group>"; };
+		B20500332852319C00D2F3B0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B20B6A73279905AF0041C866 /* SliderRange4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderRange4.swift; sourceTree = "<group>"; };
 		B20BE7FA27DB5E47009CCB6B /* TextFieldAutoFocused.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAutoFocused.swift; sourceTree = "<group>"; };
 		B210F78A28520A0F002B6AFB /* ZoomableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableImageView.swift; sourceTree = "<group>"; };
 		B210F78C28520B9A002B6AFB /* 225H.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 225H.jpg; sourceTree = "<group>"; };
 		B215578D2775AAE5005FDA24 /* LoadMoreScrolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreScrolView.swift; sourceTree = "<group>"; };
+		B218EAF82852EB8F00040930 /* ZoomableImageViewOriginal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableImageViewOriginal.swift; sourceTree = "<group>"; };
 		B2271DD027F2BEB700FE4A60 /* DemoScrollViewOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoScrollViewOffset.swift; sourceTree = "<group>"; };
 		B232DA6D27741B5200D58DEC /* CustomNumberPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberPad.swift; sourceTree = "<group>"; };
 		B232DA6F27741B6700D58DEC /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
@@ -129,6 +135,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B20500322852318200D2F3B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B20500332852319C00D2F3B0 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B20BE7F927DB5E2D009CCB6B /* TextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +253,7 @@
 			children = (
 				B277A0522784063500A88380 /* AsyncImageView.swift */,
 				B277A0542784065200A88380 /* AsyncImageViewController.swift */,
+				B20500302852313D00D2F3B0 /* AsynchronousImageView.swift */,
 			);
 			path = AsyncImageView;
 			sourceTree = "<group>";
@@ -292,6 +307,7 @@
 		B2C557472769C9B70016EF53 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B20500322852318200D2F3B0 /* Extensions */,
 				B2F6C441284C9CFE00BCB30F /* ZoomableImageView */,
 				B2EC0115283DD35D00951969 /* HashTag */,
 				B2EC0114283DD34400951969 /* UIRepresentableView */,
@@ -352,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				B210F78A28520A0F002B6AFB /* ZoomableImageView.swift */,
+				B218EAF82852EB8F00040930 /* ZoomableImageViewOriginal.swift */,
 			);
 			path = ZoomableImageView;
 			sourceTree = "<group>";
@@ -464,6 +481,7 @@
 				B277A0532784063500A88380 /* AsyncImageView.swift in Sources */,
 				B232DA6E27741B5200D58DEC /* CustomNumberPad.swift in Sources */,
 				B210F78B28520A0F002B6AFB /* ZoomableImageView.swift in Sources */,
+				B218EAF92852EB8F00040930 /* ZoomableImageViewOriginal.swift in Sources */,
 				B2BF2CE427D9B45500C8695F /* ZoomableScrollViewPOD.swift in Sources */,
 				B259777427857E6E00DA0FDE /* ParalaxHeader.swift in Sources */,
 				B2C1F28D2786CBD500EE0005 /* ScrollViewOffset.swift in Sources */,
@@ -471,6 +489,7 @@
 				B2EC0117283DD37C00951969 /* HashTagView.swift in Sources */,
 				B2271DD127F2BEB700FE4A60 /* DemoScrollViewOffset.swift in Sources */,
 				B269EB58278BD0F10086DE40 /* SliderRangeController.swift in Sources */,
+				B20500312852313D00D2F3B0 /* AsynchronousImageView.swift in Sources */,
 				B20B6A74279905AF0041C866 /* SliderRange4.swift in Sources */,
 				B2ED863B2769D3A700612F0D /* ImageViewPresentable.swift in Sources */,
 				B23AFAF02830E4350043CFCE /* User.swift in Sources */,
@@ -484,6 +503,7 @@
 				B269EB56278BD0DE0086DE40 /* SliderRangeView.swift in Sources */,
 				B20BE7FB27DB5E47009CCB6B /* TextFieldAutoFocused.swift in Sources */,
 				B23AFAEE2830E4200043CFCE /* GithubAPIManager.swift in Sources */,
+				B20500342852319C00D2F3B0 /* Extensions.swift in Sources */,
 				B2EC0120283E1E0300951969 /* TextLabelWithHyperLink.swift in Sources */,
 				B2C1CAA827EC306C00CCA014 /* InputViewFocussed.swift in Sources */,
 				B2BF2CE127D9A79500C8695F /* ImageNew2.swift in Sources */,

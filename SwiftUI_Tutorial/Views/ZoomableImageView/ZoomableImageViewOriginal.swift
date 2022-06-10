@@ -1,13 +1,13 @@
 //
-//  ZoomableImageView.swift
+//  ZoomableImageViewOriginal.swift
 //  SwiftUI_Tutorial
 //
-//  Created by HauNguyen on 09/06/2022.
+//  Created by HauNguyen on 10/06/2022.
 //
 
 import SwiftUI
 
-struct ZoomableImageView: UIViewControllerRepresentable {
+struct ZoomableImageViewOriginal: UIViewControllerRepresentable {
     init(pathUrl: Binding<String>) {
         self._pathUrl = pathUrl
     }
@@ -18,7 +18,7 @@ struct ZoomableImageView: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ viewController: ViewController, context: Context) {
-        viewController.pathUrl = self.pathUrl
+        
     }
     
     func makeCoordinator() -> Coordinator {
@@ -50,10 +50,19 @@ struct ZoomableImageView: UIViewControllerRepresentable {
             
             //2. Making an image from our photo path
             //let imagePath = Bundle.main.path(forResource: "225H", ofType: "jpg")!
-            let asyncImageView = AsynchronousImageView(source: $pathUrl, resizingMode: .aspectFit)
+            let getUrl: URL = URL(string: self.pathUrl)!
+            do {
+                let imageData = try Data(contentsOf: getUrl)
+
+                let image = UIImage(data: imageData)!
+                
+                //3. Ask imageScrollView to show image
+                self.imageScrollView.display(image)
+            } catch {
+                print("Unable to load data: \(error)")
+            }
             
-            //3. Ask imageScrollView to show image
-            self.imageScrollView.display(AnyView(asyncImageView))
+
         }
         
         override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -99,7 +108,7 @@ struct ZoomableImageView: UIViewControllerRepresentable {
     // MARK: - Coordinator
     class Coordinator: UIScrollView, UIScrollViewDelegate {
         
-        var zoomView: UIView!
+        var zoomView: UIImageView!
         
         lazy var zoomingTap: UITapGestureRecognizer = {
             let zoomingTap = UITapGestureRecognizer(target: self, action: #selector(handleZoomingTap(_:)))
@@ -111,6 +120,7 @@ struct ZoomableImageView: UIViewControllerRepresentable {
         
         override init(frame: CGRect) {
             super.init(frame: frame)
+            
             self.showsHorizontalScrollIndicator = false
             self.showsVerticalScrollIndicator = false
             self.decelerationRate = UIScrollView.DecelerationRate.fast
@@ -126,48 +136,20 @@ struct ZoomableImageView: UIViewControllerRepresentable {
             self.centerImage()
         }
         
-        func hostedUIView(scrollView: UIScrollView, _ content: AnyView) -> UIView {
-            let host = UIHostingController(rootView: content)
-            
-            host.view.translatesAutoresizingMaskIntoConstraints = false
-            scrollView.addSubview(host.view)
-            
-            let constraints = [
-                host.view.topAnchor.constraint(equalTo: scrollView.topAnchor),
-                host.view.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-                host.view.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-                host.view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-                
-                // Width and height
-                host.view.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
-                host.view.heightAnchor.constraint(equalTo: scrollView.heightAnchor),
-            ]
-            
-            scrollView.addConstraints(constraints)
-            
-            return host.view
-        }
-        
         
         //MARK: - Configure scrollView to display new image
-        func display(_ imageView: AnyView) {
+        func display(_ image: UIImage) {
+            
             //1. clear the previous image
-            self.zoomView?.removeFromSuperview()
-            self.zoomView = nil
+            zoomView?.removeFromSuperview()
+            zoomView = nil
             
             //2. make a new UIImageView for the new image
-            @State var size: CGRect = .zero
-
-            let view = self.hostedUIView(scrollView: self, imageView)
+            zoomView = UIImageView(image: image)
             
-            self.zoomView = view
+            self.addSubview(zoomView)
             
-            print("UIView: \(view) \n")
-            print("bounds: \(view.frame.size)")
-            
-            self.addSubview(self.zoomView)
-            
-            self.configureFor(UIScreen.main.bounds.size)
+            self.configureFor(image.size)
         }
         
         func configureFor(_ imageSize: CGSize) {
@@ -191,18 +173,18 @@ struct ZoomableImageView: UIViewControllerRepresentable {
             let minScale = min(xScale, yScale)                 // use minimum of these to allow the image to become fully visible
             
             //2. calculate maximumZoomscale
-            var maxScale: CGFloat = 4.0
+            var maxScale: CGFloat = 10
             
-            if minScale < 2 {
-                maxScale = 3
+            if minScale < 1 {
+                maxScale = 2
             }
             
-            if minScale >= 2 && minScale < 1 {
-                maxScale = 1.5
+            if minScale >= 1 && minScale < 5 {
+                maxScale = 7
             }
             
-            if minScale >= 1 {
-                maxScale = max(4.0, minScale)
+            if minScale >= 5 {
+                maxScale = max(10, minScale)
             }
             
             
@@ -342,8 +324,8 @@ struct ZoomableImageView: UIViewControllerRepresentable {
     }
 }
 
-struct ZoomableImageView_Previews: PreviewProvider {
+struct ZoomableImageViewOriginal_Previews: PreviewProvider {
     static var previews: some View {
-        ZoomableImageView(pathUrl: .constant("https://images.indianexpress.com/2022/06/Apple-WWDC-20221.jpg"))
+        ZoomableImageViewOriginal(pathUrl: .constant("https://images.indianexpress.com/2022/06/Apple-WWDC-20221.jpg"))
     }
 }
