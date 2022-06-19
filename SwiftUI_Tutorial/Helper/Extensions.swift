@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-public var noImage: String = ""
-
 // MARK: - Extension String
 
 public extension String {
@@ -35,6 +33,24 @@ extension ViewModifier {
         return .init(rect: rect)
     }
 }
+
+// MARK: - Extension URL
+extension URL {
+    func fileSizeInMB() -> String {
+        let p = self.path
+        
+        let attr = try? FileManager.default.attributesOfItem(atPath: p)
+        
+        if let attr = attr {
+            let fileSize = Float(attr[FileAttributeKey.size] as! UInt64) / (1024.0 * 1024.0)
+            
+            return String(format: "%.2f MB", fileSize)
+        } else {
+            return "Failed to get size"
+        }
+    }
+}
+
 
 // MARK: - Make function get frame size of swiftui view..
 

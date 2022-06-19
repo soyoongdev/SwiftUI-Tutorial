@@ -28,6 +28,10 @@
 		B23AFAEB2830E3DE0043CFCE /* ViewLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23AFAEA2830E3DE0043CFCE /* ViewLoader.swift */; };
 		B23AFAEE2830E4200043CFCE /* GithubAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23AFAED2830E4200043CFCE /* GithubAPIManager.swift */; };
 		B23AFAF02830E4350043CFCE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23AFAEF2830E4350043CFCE /* User.swift */; };
+		B23BD0D9285F88CB003A41BE /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23BD0D8285F88CB003A41BE /* Utilities.swift */; };
+		B23BD0DB285F8910003A41BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23BD0DA285F8910003A41BE /* AppDelegate.swift */; };
+		B23BD0DD285F8A31003A41BE /* VideoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23BD0DC285F8A31003A41BE /* VideoPicker.swift */; };
+		B23BD0E0285F8A84003A41BE /* LightCompressor in Frameworks */ = {isa = PBXBuildFile; productRef = B23BD0DF285F8A84003A41BE /* LightCompressor */; };
 		B23CA2342806D8BC00E90288 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = B23CA2332806D8BC00E90288 /* NukeUI */; };
 		B23CA2372806D8D700E90288 /* NukeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23CA2362806D8D700E90288 /* NukeDemo.swift */; };
 		B24329E52833F9CC0034B6D5 /* HalfSheetModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24329E42833F9CC0034B6D5 /* HalfSheetModal.swift */; };
@@ -82,6 +86,9 @@
 		B23AFAEA2830E3DE0043CFCE /* ViewLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLoader.swift; sourceTree = "<group>"; };
 		B23AFAED2830E4200043CFCE /* GithubAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIManager.swift; sourceTree = "<group>"; };
 		B23AFAEF2830E4350043CFCE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B23BD0D8285F88CB003A41BE /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		B23BD0DA285F8910003A41BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B23BD0DC285F8A31003A41BE /* VideoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPicker.swift; sourceTree = "<group>"; };
 		B23CA2362806D8D700E90288 /* NukeDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NukeDemo.swift; sourceTree = "<group>"; };
 		B24329E42833F9CC0034B6D5 /* HalfSheetModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSheetModal.swift; sourceTree = "<group>"; };
 		B24329E62833F9E30034B6D5 /* HalfSheetCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSheetCustomer.swift; sourceTree = "<group>"; };
@@ -126,6 +133,7 @@
 				B2341FD627E9A98800CE369E /* SwiftUITrackableScrollView in Frameworks */,
 				B2B50402279CA6EA00D22726 /* SliderRangeSwiftUI in Frameworks */,
 				B23CA2342806D8BC00E90288 /* NukeUI in Frameworks */,
+				B23BD0E0285F8A84003A41BE /* LightCompressor in Frameworks */,
 				B27D31912848C99E0070894C /* ActiveLabel in Frameworks */,
 				B21A48C82779AD6A001FEC1D /* SwiftUIPullToRefresh in Frameworks */,
 				B21A48C32779A2B5001FEC1D /* SwiftUIRefresh in Frameworks */,
@@ -135,14 +143,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B20500322852318200D2F3B0 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				B20500332852319C00D2F3B0 /* Extensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		B20BE7F927DB5E2D009CCB6B /* TextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,13 +171,6 @@
 			path = VerificationOTPView;
 			sourceTree = "<group>";
 		};
-		B23AFADD2830E3270043CFCE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		B23AFADE2830E32D0043CFCE /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +194,23 @@
 				B23AFAED2830E4200043CFCE /* GithubAPIManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		B23BD0D4285F8881003A41BE /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				B23BD0DC285F8A31003A41BE /* VideoPicker.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		B23BD0D7285F88B4003A41BE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B20500332852319C00D2F3B0 /* Extensions.swift */,
+				B23BD0D8285F88CB003A41BE /* Utilities.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		B23CA2352806D8C900E90288 /* NukeUIDemo */ = {
@@ -285,6 +295,7 @@
 		B2C557372769C9720016EF53 /* SwiftUI_Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				B23BD0D7285F88B4003A41BE /* Helper */,
 				B210F78C28520B9A002B6AFB /* 225H.jpg */,
 				B2C557472769C9B70016EF53 /* Views */,
 				B2C557382769C9720016EF53 /* SwiftUI_TutorialApp.swift */,
@@ -292,6 +303,7 @@
 				B2C5573C2769C9730016EF53 /* Assets.xcassets */,
 				B2C557412769C9730016EF53 /* Info.plist */,
 				B2C5573E2769C9730016EF53 /* Preview Content */,
+				B23BD0DA285F8910003A41BE /* AppDelegate.swift */,
 			);
 			path = SwiftUI_Tutorial;
 			sourceTree = "<group>";
@@ -307,7 +319,7 @@
 		B2C557472769C9B70016EF53 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B20500322852318200D2F3B0 /* Extensions */,
+				B23BD0D4285F8881003A41BE /* Video */,
 				B2F6C441284C9CFE00BCB30F /* ZoomableImageView */,
 				B2EC0115283DD35D00951969 /* HashTag */,
 				B2EC0114283DD34400951969 /* UIRepresentableView */,
@@ -315,7 +327,6 @@
 				B23AFAEC2830E4040043CFCE /* Network */,
 				B23AFADF2830E3330043CFCE /* Component */,
 				B23AFADE2830E32D0043CFCE /* Model */,
-				B23AFADD2830E3270043CFCE /* ViewModel */,
 				B23CA2352806D8C900E90288 /* NukeUIDemo */,
 				B2FE157027F2BE630068CE80 /* ScrollViewOffset */,
 				B20BE7F927DB5E2D009CCB6B /* TextField */,
@@ -407,6 +418,7 @@
 				B2341FD527E9A98800CE369E /* SwiftUITrackableScrollView */,
 				B23CA2332806D8BC00E90288 /* NukeUI */,
 				B27D31902848C99E0070894C /* ActiveLabel */,
+				B23BD0DF285F8A84003A41BE /* LightCompressor */,
 			);
 			productName = SwiftUI_Tutorial;
 			productReference = B2C557352769C9720016EF53 /* SwiftUI_Tutorial.app */;
@@ -443,6 +455,7 @@
 				B2341FD427E9A98800CE369E /* XCRemoteSwiftPackageReference "trackable-scroll-view" */,
 				B23CA2322806D8BC00E90288 /* XCRemoteSwiftPackageReference "NukeUI" */,
 				B27D318F2848C99E0070894C /* XCRemoteSwiftPackageReference "ActiveLabel.swift" */,
+				B23BD0DE285F8A84003A41BE /* XCRemoteSwiftPackageReference "LightCompressor_iOS" */,
 			);
 			productRefGroup = B2C557362769C9720016EF53 /* Products */;
 			projectDirPath = "";
@@ -482,6 +495,7 @@
 				B232DA6E27741B5200D58DEC /* CustomNumberPad.swift in Sources */,
 				B210F78B28520A0F002B6AFB /* ZoomableImageView.swift in Sources */,
 				B218EAF92852EB8F00040930 /* ZoomableImageViewOriginal.swift in Sources */,
+				B23BD0D9285F88CB003A41BE /* Utilities.swift in Sources */,
 				B2BF2CE427D9B45500C8695F /* ZoomableScrollViewPOD.swift in Sources */,
 				B259777427857E6E00DA0FDE /* ParalaxHeader.swift in Sources */,
 				B2C1F28D2786CBD500EE0005 /* ScrollViewOffset.swift in Sources */,
@@ -494,6 +508,7 @@
 				B2ED863B2769D3A700612F0D /* ImageViewPresentable.swift in Sources */,
 				B23AFAF02830E4350043CFCE /* User.swift in Sources */,
 				B23AFAE92830E3C80043CFCE /* UserRow.swift in Sources */,
+				B23BD0DB285F8910003A41BE /* AppDelegate.swift in Sources */,
 				B2C118AF2770829400F84CF0 /* RefreshableScrollView.swift in Sources */,
 				B2ED863F2769D61500612F0D /* ImageViewController.swift in Sources */,
 				B269EB5A278BE0B20086DE40 /* SliderRange3.swift in Sources */,
@@ -502,6 +517,7 @@
 				B2699319276C33470056D631 /* ZoomableScrollView.swift in Sources */,
 				B269EB56278BD0DE0086DE40 /* SliderRangeView.swift in Sources */,
 				B20BE7FB27DB5E47009CCB6B /* TextFieldAutoFocused.swift in Sources */,
+				B23BD0DD285F8A31003A41BE /* VideoPicker.swift in Sources */,
 				B23AFAEE2830E4200043CFCE /* GithubAPIManager.swift in Sources */,
 				B20500342852319C00D2F3B0 /* Extensions.swift in Sources */,
 				B2EC0120283E1E0300951969 /* TextLabelWithHyperLink.swift in Sources */,
@@ -738,6 +754,14 @@
 				kind = branch;
 			};
 		};
+		B23BD0DE285F8A84003A41BE /* XCRemoteSwiftPackageReference "LightCompressor_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AbedElazizShe/LightCompressor_iOS.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		B23CA2322806D8BC00E90288 /* XCRemoteSwiftPackageReference "NukeUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/NukeUI.git";
@@ -784,6 +808,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B2341FD427E9A98800CE369E /* XCRemoteSwiftPackageReference "trackable-scroll-view" */;
 			productName = SwiftUITrackableScrollView;
+		};
+		B23BD0DF285F8A84003A41BE /* LightCompressor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B23BD0DE285F8A84003A41BE /* XCRemoteSwiftPackageReference "LightCompressor_iOS" */;
+			productName = LightCompressor;
 		};
 		B23CA2332806D8BC00E90288 /* NukeUI */ = {
 			isa = XCSwiftPackageProductDependency;

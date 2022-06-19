@@ -19,6 +19,15 @@
       }
     },
     {
+      "identity" : "lightcompressor_ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AbedElazizShe/LightCompressor_iOS.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "0ce84fd52d557d3dc31ab8cab97cfeffe53c1e85"
+      }
+    },
+    {
       "identity" : "nuke",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kean/Nuke.git",
