@@ -53,6 +53,7 @@ struct HalfSheetModal<Content: View>: UIViewRepresentable {
         // Create the UIViewController that will be presented by the UIButton
         let vc = UIViewController()
         
+        
         // Create the UIHostingController that will embed the SwiftUI View
         let host = UIHostingController(rootView: content)
         

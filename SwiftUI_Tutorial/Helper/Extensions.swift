@@ -24,6 +24,10 @@ extension View {
         self.modifier(MeasureSizeModifier())
             .onPreferenceChange(SizePreferenceKey.self, perform: action)
     }
+    
+    func animation(_ animation: Animation? = .default) -> some View {
+        self.animation(animation, value: UUID())
+    }
 }
 
 // MARK: - Extension ViewModifier

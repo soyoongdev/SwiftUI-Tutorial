@@ -10,7 +10,9 @@ import SwiftUI
 struct ContentView: View {
 
     var body : some View {
-        ZoomableImageViewOriginal(pathUrl: .constant("https://images.indianexpress.com/2022/06/Apple-WWDC-20221.jpg"))
+        //ZoomableImageViewOriginal(pathUrl: .constant("https://images.indianexpress.com/2022/06/Apple-WWDC-20221.jpg"))
+        //DemoVideoPickerView()
+        DemoAlertView()
     }
     
 }
