@@ -21,8 +21,7 @@
 		B2271DD127F2BEB700FE4A60 /* DemoScrollViewOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2271DD027F2BEB700FE4A60 /* DemoScrollViewOffset.swift */; };
 		B22A966128602BC600785C28 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A966028602BC600785C28 /* CircleProgressView.swift */; };
 		B22A966428602C1E00785C28 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A966328602C1E00785C28 /* BlurView.swift */; };
-		B22A966B286054C800785C28 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = B22A966A286054C800785C28 /* AlertToast */; };
-		B22A966D286054F600785C28 /* AlertToastPackageDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A966C286054F600785C28 /* AlertToastPackageDemo.swift */; };
+		B22A966D286054F600785C28 /* DemoAlertToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A966C286054F600785C28 /* DemoAlertToast.swift */; };
 		B232DA6E27741B5200D58DEC /* CustomNumberPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B232DA6D27741B5200D58DEC /* CustomNumberPad.swift */; };
 		B232DA7027741B6700D58DEC /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B232DA6F27741B6700D58DEC /* VerificationView.swift */; };
 		B232DA7227743D8D00D58DEC /* PinEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B232DA7127743D8D00D58DEC /* PinEntryView.swift */; };
@@ -42,6 +41,7 @@
 		B24329E52833F9CC0034B6D5 /* HalfSheetModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24329E42833F9CC0034B6D5 /* HalfSheetModal.swift */; };
 		B24329E72833F9E30034B6D5 /* HalfSheetCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24329E62833F9E30034B6D5 /* HalfSheetCustomer.swift */; };
 		B259777427857E6E00DA0FDE /* ParalaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259777327857E6E00DA0FDE /* ParalaxHeader.swift */; };
+		B26927012861F68C00198EB8 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = B26927002861F68C00198EB8 /* AlertToast */; };
 		B2699319276C33470056D631 /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2699318276C33470056D631 /* ZoomableScrollView.swift */; };
 		B269EB56278BD0DE0086DE40 /* SliderRangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B269EB55278BD0DE0086DE40 /* SliderRangeView.swift */; };
 		B269EB58278BD0F10086DE40 /* SliderRangeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B269EB57278BD0F10086DE40 /* SliderRangeController.swift */; };
@@ -85,7 +85,7 @@
 		B2271DD027F2BEB700FE4A60 /* DemoScrollViewOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoScrollViewOffset.swift; sourceTree = "<group>"; };
 		B22A966028602BC600785C28 /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		B22A966328602C1E00785C28 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
-		B22A966C286054F600785C28 /* AlertToastPackageDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertToastPackageDemo.swift; sourceTree = "<group>"; };
+		B22A966C286054F600785C28 /* DemoAlertToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAlertToast.swift; sourceTree = "<group>"; };
 		B232DA6D27741B5200D58DEC /* CustomNumberPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberPad.swift; sourceTree = "<group>"; };
 		B232DA6F27741B6700D58DEC /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
 		B232DA7127743D8D00D58DEC /* PinEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinEntryView.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 				B20B6A722799058E0041C866 /* Sliders in Frameworks */,
 				B2341FD627E9A98800CE369E /* SwiftUITrackableScrollView in Frameworks */,
 				B2B50402279CA6EA00D22726 /* SliderRangeSwiftUI in Frameworks */,
-				B22A966B286054C800785C28 /* AlertToast in Frameworks */,
+				B26927012861F68C00198EB8 /* AlertToast in Frameworks */,
 				B23CA2342806D8BC00E90288 /* NukeUI in Frameworks */,
 				B23BD0E0285F8A84003A41BE /* LightCompressor in Frameworks */,
 				B27D31912848C99E0070894C /* ActiveLabel in Frameworks */,
@@ -243,7 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				B23BD0E2285F8BF3003A41BE /* AlertView.swift */,
-				B22A966C286054F600785C28 /* AlertToastPackageDemo.swift */,
+				B22A966C286054F600785C28 /* DemoAlertToast.swift */,
 			);
 			path = AlertView;
 			sourceTree = "<group>";
@@ -457,7 +457,7 @@
 				B23CA2332806D8BC00E90288 /* NukeUI */,
 				B27D31902848C99E0070894C /* ActiveLabel */,
 				B23BD0DF285F8A84003A41BE /* LightCompressor */,
-				B22A966A286054C800785C28 /* AlertToast */,
+				B26927002861F68C00198EB8 /* AlertToast */,
 			);
 			productName = SwiftUI_Tutorial;
 			productReference = B2C557352769C9720016EF53 /* SwiftUI_Tutorial.app */;
@@ -495,7 +495,7 @@
 				B23CA2322806D8BC00E90288 /* XCRemoteSwiftPackageReference "NukeUI" */,
 				B27D318F2848C99E0070894C /* XCRemoteSwiftPackageReference "ActiveLabel.swift" */,
 				B23BD0DE285F8A84003A41BE /* XCRemoteSwiftPackageReference "LightCompressor_iOS" */,
-				B22A9669286054C700785C28 /* XCRemoteSwiftPackageReference "AlertToast" */,
+				B26926FF2861F68C00198EB8 /* XCRemoteSwiftPackageReference "AlertToast" */,
 			);
 			productRefGroup = B2C557362769C9720016EF53 /* Products */;
 			projectDirPath = "";
@@ -570,7 +570,7 @@
 				B2C5574B2769CAE60016EF53 /* UITextFieldPresentable.swift in Sources */,
 				B2EC0119283DD5D200951969 /* HashTag2.swift in Sources */,
 				B23CA2372806D8D700E90288 /* NukeDemo.swift in Sources */,
-				B22A966D286054F600785C28 /* AlertToastPackageDemo.swift in Sources */,
+				B22A966D286054F600785C28 /* DemoAlertToast.swift in Sources */,
 				B232DA7227743D8D00D58DEC /* PinEntryView.swift in Sources */,
 				B22A966428602C1E00785C28 /* BlurView.swift in Sources */,
 				B2341FD327E9A96500CE369E /* TrackableScrollView.swift in Sources */,
@@ -790,14 +790,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		B22A9669286054C700785C28 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/elai950/AlertToast.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		B2341FD427E9A98800CE369E /* XCRemoteSwiftPackageReference "trackable-scroll-view" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/maxnatchanon/trackable-scroll-view.git";
@@ -820,6 +812,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.8.1;
+			};
+		};
+		B26926FF2861F68C00198EB8 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				branch = master;
+				kind = branch;
 			};
 		};
 		B27D318F2848C99E0070894C /* XCRemoteSwiftPackageReference "ActiveLabel.swift" */ = {
@@ -856,11 +856,6 @@
 			package = B21A48C62779AD6A001FEC1D /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */;
 			productName = SwiftUIPullToRefresh;
 		};
-		B22A966A286054C800785C28 /* AlertToast */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B22A9669286054C700785C28 /* XCRemoteSwiftPackageReference "AlertToast" */;
-			productName = AlertToast;
-		};
 		B2341FD527E9A98800CE369E /* SwiftUITrackableScrollView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B2341FD427E9A98800CE369E /* XCRemoteSwiftPackageReference "trackable-scroll-view" */;
@@ -875,6 +870,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B23CA2322806D8BC00E90288 /* XCRemoteSwiftPackageReference "NukeUI" */;
 			productName = NukeUI;
+		};
+		B26927002861F68C00198EB8 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B26926FF2861F68C00198EB8 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
 		};
 		B27D31902848C99E0070894C /* ActiveLabel */ = {
 			isa = XCSwiftPackageProductDependency;

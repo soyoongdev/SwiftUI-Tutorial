@@ -6,78 +6,118 @@
 //
 
 import SwiftUI
+import Combine
 
-extension View {
-    func alertView<Content>(isPresented: Binding<Bool>, @ViewBuilder content: @escaping () -> Content) -> some View where Content : View {
-        modifier(AlertViewModifier(isPresented: isPresented, swiftUIContent: content))
+public extension View {
+    /// Present `AlertToast`.
+    /// - Parameters:
+    ///   - show: Binding<Bool>
+    ///   - alert: () -> AlertToast
+    /// - Returns: `AlertToast`
+    func alertView(isPresented: Binding<Bool>, offsetY: CGFloat = 0, alert: @escaping () -> AlertView) -> some View{
+        modifier(AlertViewModifier(isPresented: isPresented, offsetY: offsetY, alert: alert))
     }
 }
 
-struct AlertViewModifier<SwiftUIContent : View>: ViewModifier {
-    
+public struct AlertViewModifier: ViewModifier {
+    ///Presentation `Binding<Bool>`
     @Binding var isPresented: Bool
     
-    let swiftUIContent: () -> SwiftUIContent
+    var offsetY: CGFloat = 0
     
-    init(isPresented: Binding<Bool>, @ViewBuilder swiftUIContent: @escaping () -> SwiftUIContent)
-    {
-        self._isPresented = isPresented
-        self.swiftUIContent = swiftUIContent
+    ///Init `AlertToast` View
+    var alert: () -> AlertView
+    
+    let screen = UIScreen.main.bounds
+    
+    @State private var hostRect: CGRect = .zero
+    @State private var alertRect: CGRect = .zero
+    
+    private var offset: CGFloat{
+#if os(iOS)
+        return -hostRect.midY + alertRect.height
+#else
+        return (-hostRect.midY + screen.midY) + alertRect.height
+#endif
     }
     
-    func body(content: Content) -> some View {
-        ZStack {
-            AlertView(isPresented: $isPresented, content: self.swiftUIContent)
-                .fixedSize()
-            
-            content
-        }
+    public func body(content: Content) -> some View {
+        content
+            .overlay(
+                ZStack{
+                    self.alert()
+                        .offset(y: self.offsetY)
+                }
+                    .frame(maxWidth: self.screen.width,
+                           maxHeight: self.screen.height,
+                           alignment: .center)
+                    .edgesIgnoringSafeArea(.all)
+                    .animation(Animation.spring(), value: self.isPresented)
+            )
     }
 }
 
-struct AlertView<Content : View>: UIViewControllerRepresentable {
+public struct AlertView: View {
     
-    // 1
-    init(isPresented: Binding<Bool>, @ViewBuilder content: @escaping () -> Content) {
-        self.isPresented = isPresented
-        self.content = content
-    }
-        
-    private var content: () -> Content
+    ///The title of the alert (`Optional(String)`)
+    public var title: String? = nil
     
-    private var isPresented: Binding<Bool>
+    /// Set action on  tap title
+    public var onTapTitle: (() -> Void)?
+
+    /// Set action on  tap subTitle
+    public var subTitle: String? = nil
+    
+    /// Get title color
+    public var onTapSubTitle: (() -> Void)?
+
+    /// Get title color
+    public var titleColor: Color? = nil
+    
+    public var content: () -> AnyView
+    
+    
+    ///Alert View
+    public var alert: some View{
+        VStack{
+            Spacer()
+            self.content()
+            Spacer()
             
-    func makeUIViewController(context: Context) -> UIViewController {
-        
-        return UIViewController()
-    }
-    
-    func updateUIViewController(_ viewController: UIViewController, context: Context) {
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        
-        let hostedView = UIHostingController(rootView: self.content())
-        
-        hostedView.view.translatesAutoresizingMaskIntoConstraints = false
-        hostedView.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        alertController.setValue(hostedView, forKey: "contentViewController") // importian 👈
-        
-        if isPresented.wrappedValue {
-            viewController.present(alertController, animated: true, completion: nil)
-        } else {
-            viewController.dismiss(animated: true, completion: nil)
+            VStack(spacing: 8){
+                if title != nil{
+                    Button(action: {self.onTapTitle?()}) {
+                        Text(LocalizedStringKey(title ?? ""))
+                            .font(Font.body.bold())
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(titleColor != nil ? titleColor! : Color.blue)
+                    }
+                }
+                if subTitle != nil{
+                    Button(action: {self.onTapSubTitle?()}) {
+                        Text(LocalizedStringKey(subTitle ?? ""))
+                            .font(Font.footnote)
+                            .opacity(0.7)
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(titleColor != nil ? titleColor! : Color.blue)
+                    }
+                }
+            }
         }
+        .fixedSize(horizontal: true, vertical: false)
+        .padding()
+        .frame(maxWidth: 175, maxHeight: 175, alignment: .center)
+        .blurView()
+        .cornerRadius(10)
     }
     
-    func makeCoordinator() -> Coordinator {
-        Coordinator()
-    }
-    
-    // MARK: - Coordinator
-    class Coordinator: NSObject {
-        
+    ///Body init determine by `displayMode`
+    public var body: some View{
+        self.alert
     }
 }
+
+
 
 struct DemoAlertView: View {
     @State var isPresented: Bool = false
@@ -91,17 +131,14 @@ struct DemoAlertView: View {
             }
         }
         .alertView(isPresented: $isPresented) {
-
-            ZStack {
-                Button(action: {
-                    self.isPresented = false
-                }) {
-                    Text("Dismiss")
-                        .font(.title3)
-                        .foregroundColor(.blue)
-                }
+            AlertView(title: "Title", subTitle: "Subtitle") {
+                AnyView(
+                    Image("photo2")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 80, height: 80)
+                )
             }
-            
         }
     }
 }

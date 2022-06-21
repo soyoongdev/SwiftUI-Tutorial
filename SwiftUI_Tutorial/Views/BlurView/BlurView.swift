@@ -9,32 +9,21 @@ import SwiftUI
 
 extension View {
     func blurView(style: UIBlurEffect.Style = .systemMaterialDark) -> some View {
-        return self.background(BlurView(style: style))
+        return self.background(BlurView())
     }
 }
 
-struct BlurView: UIViewRepresentable {
+@available(iOS 13, *)
+public struct BlurView: UIViewRepresentable {
+    public typealias UIViewType = UIVisualEffectView
     
-    let style: UIBlurEffect.Style
-    
-    func makeUIView(context: UIViewRepresentableContext<BlurView>) -> UIView {
-        let view = UIView(frame: .zero)
-        view.backgroundColor = .clear
-        let blurEffect = UIBlurEffect(style: self.style)
-        let blurView = UIVisualEffectView(effect: blurEffect)
-        blurView.translatesAutoresizingMaskIntoConstraints = false
-        view.insertSubview(blurView, at: 0)
-        NSLayoutConstraint.activate([
-            blurView.heightAnchor.constraint(equalTo: view.heightAnchor),
-            blurView.widthAnchor.constraint(equalTo: view.widthAnchor),
-        ])
-        return view
+    public func makeUIView(context: Context) -> UIVisualEffectView {
+        return UIVisualEffectView(effect: UIBlurEffect(style: .systemMaterial))
     }
     
-    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<BlurView>) {
-        
+    public func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
+        uiView.effect = UIBlurEffect(style: .systemMaterial)
     }
-
 }
 
 struct BlurView_Previews: PreviewProvider {
@@ -42,7 +31,7 @@ struct BlurView_Previews: PreviewProvider {
         ZStack {
             Color.black
             
-            BlurView(style: .regular)
+            BlurView()
                 .frame(width: 300, height: 300)
             Text("Hey there, I'm on top of the blur")
             
