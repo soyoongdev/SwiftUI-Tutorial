@@ -70,8 +70,13 @@
 		B2D1F1452865CE7F003502B5 /* ValueSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1F1442865CE7F003502B5 /* ValueSlider.swift */; };
 		B2D1F1472865CEA9003502B5 /* ValueSlider+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1F1462865CEA9003502B5 /* ValueSlider+Inits.swift */; };
 		B2D1F1492865CEC7003502B5 /* View+SliderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1F1482865CEC7003502B5 /* View+SliderStyle.swift */; };
-		B2D1F14B2865CF1E003502B5 /* RangeSlider+Intis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1F14A2865CF1E003502B5 /* RangeSlider+Intis.swift */; };
 		B2D1F14D2865CF48003502B5 /* GradientSliderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1F14C2865CF48003502B5 /* GradientSliderStyle.swift */; };
+		B2D1F14F2865D35F003502B5 /* RangeSliderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1F14E2865D35F003502B5 /* RangeSliderStyle.swift */; };
+		B2D4E8D42866145D004AB12F /* DefaultRangeTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D4E8D32866145D004AB12F /* DefaultRangeTrack.swift */; };
+		B2D4E8D628661D69004AB12F /* RangeSlider+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D4E8D528661D69004AB12F /* RangeSlider+Inits.swift */; };
+		B2D4E8D82866214E004AB12F /* DefaultThumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D4E8D72866214E004AB12F /* DefaultThumb.swift */; };
+		B2D4E8DC2866253C004AB12F /* LinearValueMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D4E8DB2866253C004AB12F /* LinearValueMath.swift */; };
+		B2D4E8DE286638C6004AB12F /* RangeTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D4E8DD286638C6004AB12F /* RangeTrack.swift */; };
 		B2E70D48282F5F0700A37B43 /* UITableViewRepresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E70D47282F5F0700A37B43 /* UITableViewRepresentableView.swift */; };
 		B2EC0117283DD37C00951969 /* HashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC0116283DD37C00951969 /* HashTagView.swift */; };
 		B2EC0119283DD5D200951969 /* HashTag2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC0118283DD5D200951969 /* HashTag2.swift */; };
@@ -140,8 +145,13 @@
 		B2D1F1442865CE7F003502B5 /* ValueSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueSlider.swift; sourceTree = "<group>"; };
 		B2D1F1462865CEA9003502B5 /* ValueSlider+Inits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValueSlider+Inits.swift"; sourceTree = "<group>"; };
 		B2D1F1482865CEC7003502B5 /* View+SliderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+SliderStyle.swift"; sourceTree = "<group>"; };
-		B2D1F14A2865CF1E003502B5 /* RangeSlider+Intis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RangeSlider+Intis.swift"; sourceTree = "<group>"; };
 		B2D1F14C2865CF48003502B5 /* GradientSliderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSliderStyle.swift; sourceTree = "<group>"; };
+		B2D1F14E2865D35F003502B5 /* RangeSliderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderStyle.swift; sourceTree = "<group>"; };
+		B2D4E8D32866145D004AB12F /* DefaultRangeTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRangeTrack.swift; sourceTree = "<group>"; };
+		B2D4E8D528661D69004AB12F /* RangeSlider+Inits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RangeSlider+Inits.swift"; sourceTree = "<group>"; };
+		B2D4E8D72866214E004AB12F /* DefaultThumb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultThumb.swift; sourceTree = "<group>"; };
+		B2D4E8DB2866253C004AB12F /* LinearValueMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearValueMath.swift; sourceTree = "<group>"; };
+		B2D4E8DD286638C6004AB12F /* RangeTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeTrack.swift; sourceTree = "<group>"; };
 		B2E70D47282F5F0700A37B43 /* UITableViewRepresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRepresentableView.swift; sourceTree = "<group>"; };
 		B2EC0116283DD37C00951969 /* HashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagView.swift; sourceTree = "<group>"; };
 		B2EC0118283DD5D200951969 /* HashTag2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTag2.swift; sourceTree = "<group>"; };
@@ -410,6 +420,7 @@
 		B2D1F13D2865CDEC003502B5 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B2D4E8D928662512004AB12F /* Base */,
 				B2D1F13B2865CDC3003502B5 /* RangeSlider.swift */,
 				B2D1F13E2865CE04003502B5 /* CustomSliderStyle.swift */,
 				B2D1F1402865CE36003502B5 /* SliderStyle.swift */,
@@ -417,10 +428,38 @@
 				B2D1F1442865CE7F003502B5 /* ValueSlider.swift */,
 				B2D1F1462865CEA9003502B5 /* ValueSlider+Inits.swift */,
 				B2D1F1482865CEC7003502B5 /* View+SliderStyle.swift */,
-				B2D1F14A2865CF1E003502B5 /* RangeSlider+Intis.swift */,
 				B2D1F14C2865CF48003502B5 /* GradientSliderStyle.swift */,
+				B2D1F14E2865D35F003502B5 /* RangeSliderStyle.swift */,
+				B2D4E8D528661D69004AB12F /* RangeSlider+Inits.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		B2D4E8D22866142B004AB12F /* DefaultRangeTrackStyle */ = {
+			isa = PBXGroup;
+			children = (
+				B2D4E8D32866145D004AB12F /* DefaultRangeTrack.swift */,
+				B2D4E8D72866214E004AB12F /* DefaultThumb.swift */,
+				B2D4E8DD286638C6004AB12F /* RangeTrack.swift */,
+			);
+			path = DefaultRangeTrackStyle;
+			sourceTree = "<group>";
+		};
+		B2D4E8D928662512004AB12F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B2D4E8D22866142B004AB12F /* DefaultRangeTrackStyle */,
+				B2D4E8DA2866251D004AB12F /* ValueCalculator */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B2D4E8DA2866251D004AB12F /* ValueCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				B2D4E8DB2866253C004AB12F /* LinearValueMath.swift */,
+			);
+			path = ValueCalculator;
 			sourceTree = "<group>";
 		};
 		B2EC0114283DD34400951969 /* UIRepresentableView */ = {
@@ -569,7 +608,6 @@
 				B2ED86392769D34D00612F0D /* ImageViews.swift in Sources */,
 				B2D1F1432865CE62003502B5 /* SliderStyleKey.swift in Sources */,
 				B29201AD2796AB6E00226F93 /* SliderRange2.swift in Sources */,
-				B2D1F14B2865CF1E003502B5 /* RangeSlider+Intis.swift in Sources */,
 				B277A0552784065200A88380 /* AsyncImageViewController.swift in Sources */,
 				B215578E2775AAE5005FDA24 /* LoadMoreScrolView.swift in Sources */,
 				B2D1F13C2865CDC3003502B5 /* RangeSlider.swift in Sources */,
@@ -580,6 +618,8 @@
 				B277A0532784063500A88380 /* AsyncImageView.swift in Sources */,
 				B232DA6E27741B5200D58DEC /* CustomNumberPad.swift in Sources */,
 				B210F78B28520A0F002B6AFB /* ZoomableImageView.swift in Sources */,
+				B2D4E8D82866214E004AB12F /* DefaultThumb.swift in Sources */,
+				B2D4E8DE286638C6004AB12F /* RangeTrack.swift in Sources */,
 				B218EAF92852EB8F00040930 /* ZoomableImageViewOriginal.swift in Sources */,
 				B23BD0D9285F88CB003A41BE /* Utilities.swift in Sources */,
 				B2BF2CE427D9B45500C8695F /* ZoomableScrollViewPOD.swift in Sources */,
@@ -614,14 +654,18 @@
 				B2EC0120283E1E0300951969 /* TextLabelWithHyperLink.swift in Sources */,
 				B2C1CAA827EC306C00CCA014 /* InputViewFocussed.swift in Sources */,
 				B2BF2CE127D9A79500C8695F /* ImageNew2.swift in Sources */,
+				B2D4E8DC2866253C004AB12F /* LinearValueMath.swift in Sources */,
+				B2D1F14F2865D35F003502B5 /* RangeSliderStyle.swift in Sources */,
 				B23AFAEB2830E3DE0043CFCE /* ViewLoader.swift in Sources */,
 				B24329E52833F9CC0034B6D5 /* HalfSheetModal.swift in Sources */,
 				B2C5574B2769CAE60016EF53 /* UITextFieldPresentable.swift in Sources */,
 				B2D1F1472865CEA9003502B5 /* ValueSlider+Inits.swift in Sources */,
+				B2D4E8D628661D69004AB12F /* RangeSlider+Inits.swift in Sources */,
 				B2EC0119283DD5D200951969 /* HashTag2.swift in Sources */,
 				B23CA2372806D8D700E90288 /* NukeDemo.swift in Sources */,
 				B22A966D286054F600785C28 /* DemoAlertToast.swift in Sources */,
 				B232DA7227743D8D00D58DEC /* PinEntryView.swift in Sources */,
+				B2D4E8D42866145D004AB12F /* DefaultRangeTrack.swift in Sources */,
 				B22A966428602C1E00785C28 /* BlurView.swift in Sources */,
 				B2341FD327E9A96500CE369E /* TrackableScrollView.swift in Sources */,
 				B2D1F1452865CE7F003502B5 /* ValueSlider.swift in Sources */,
