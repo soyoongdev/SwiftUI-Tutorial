@@ -104,7 +104,7 @@ extension View {
 
 struct DemoAnimateProgressView: View {
     @State var progress: CGFloat = 42.0
-    @State var isPresented: Bool = false
+    @State var isPresented: Bool = true
     
     var body: some View {
         ZStack {
@@ -129,9 +129,10 @@ struct DemoAnimateProgressView: View {
 struct CircleProgressView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            Color.black.ignoresSafeArea()
+            Color.yellow.ignoresSafeArea()
             
             DemoAnimateProgressView()
         }
+        
     }
 }

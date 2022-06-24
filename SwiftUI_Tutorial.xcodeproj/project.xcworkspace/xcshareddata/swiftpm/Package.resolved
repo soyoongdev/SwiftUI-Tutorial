@@ -64,15 +64,6 @@
       }
     },
     {
-      "identity" : "sliders-backup",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/moridaffy/sliders-backup.git",
-      "state" : {
-        "branch" : "master",
-        "revision" : "9509587c706d3d079be6e620b4c4d68316558c9b"
-      }
-    },
-    {
       "identity" : "swiftui-introspect",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/siteline/SwiftUI-Introspect.git",

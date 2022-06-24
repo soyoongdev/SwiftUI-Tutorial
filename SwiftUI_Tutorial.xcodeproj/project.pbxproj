@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B20500312852313D00D2F3B0 /* AsynchronousImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20500302852313D00D2F3B0 /* AsynchronousImageView.swift */; };
 		B20500342852319C00D2F3B0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20500332852319C00D2F3B0 /* Extensions.swift */; };
-		B20B6A722799058E0041C866 /* Sliders in Frameworks */ = {isa = PBXBuildFile; productRef = B20B6A712799058E0041C866 /* Sliders */; };
 		B20B6A74279905AF0041C866 /* SliderRange4.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20B6A73279905AF0041C866 /* SliderRange4.swift */; };
 		B20BE7FB27DB5E47009CCB6B /* TextFieldAutoFocused.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20BE7FA27DB5E47009CCB6B /* TextFieldAutoFocused.swift */; };
 		B210F78B28520A0F002B6AFB /* ZoomableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210F78A28520A0F002B6AFB /* ZoomableImageView.swift */; };
@@ -63,6 +62,16 @@
 		B2C557402769C9730016EF53 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C5573F2769C9730016EF53 /* Preview Assets.xcassets */; };
 		B2C557492769C9FA0016EF53 /* UIKitConvertableSwiftUIPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C557482769C9FA0016EF53 /* UIKitConvertableSwiftUIPresentable.swift */; };
 		B2C5574B2769CAE60016EF53 /* UITextFieldPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C5574A2769CAE60016EF53 /* UITextFieldPresentable.swift */; };
+		B2D1F1362865C2BB003502B5 /* RangeSliderExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1F1352865C2BB003502B5 /* RangeSliderExamplesView.swift */; };
+		B2D1F13C2865CDC3003502B5 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1F13B2865CDC3003502B5 /* RangeSlider.swift */; };
+		B2D1F13F2865CE04003502B5 /* CustomSliderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1F13E2865CE04003502B5 /* CustomSliderStyle.swift */; };
+		B2D1F1412865CE36003502B5 /* SliderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1F1402865CE36003502B5 /* SliderStyle.swift */; };
+		B2D1F1432865CE62003502B5 /* SliderStyleKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1F1422865CE62003502B5 /* SliderStyleKey.swift */; };
+		B2D1F1452865CE7F003502B5 /* ValueSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1F1442865CE7F003502B5 /* ValueSlider.swift */; };
+		B2D1F1472865CEA9003502B5 /* ValueSlider+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1F1462865CEA9003502B5 /* ValueSlider+Inits.swift */; };
+		B2D1F1492865CEC7003502B5 /* View+SliderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1F1482865CEC7003502B5 /* View+SliderStyle.swift */; };
+		B2D1F14B2865CF1E003502B5 /* RangeSlider+Intis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1F14A2865CF1E003502B5 /* RangeSlider+Intis.swift */; };
+		B2D1F14D2865CF48003502B5 /* GradientSliderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D1F14C2865CF48003502B5 /* GradientSliderStyle.swift */; };
 		B2E70D48282F5F0700A37B43 /* UITableViewRepresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E70D47282F5F0700A37B43 /* UITableViewRepresentableView.swift */; };
 		B2EC0117283DD37C00951969 /* HashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC0116283DD37C00951969 /* HashTagView.swift */; };
 		B2EC0119283DD5D200951969 /* HashTag2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC0118283DD5D200951969 /* HashTag2.swift */; };
@@ -123,6 +132,16 @@
 		B2C557412769C9730016EF53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2C557482769C9FA0016EF53 /* UIKitConvertableSwiftUIPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitConvertableSwiftUIPresentable.swift; sourceTree = "<group>"; };
 		B2C5574A2769CAE60016EF53 /* UITextFieldPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldPresentable.swift; sourceTree = "<group>"; };
+		B2D1F1352865C2BB003502B5 /* RangeSliderExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderExamplesView.swift; sourceTree = "<group>"; };
+		B2D1F13B2865CDC3003502B5 /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		B2D1F13E2865CE04003502B5 /* CustomSliderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderStyle.swift; sourceTree = "<group>"; };
+		B2D1F1402865CE36003502B5 /* SliderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderStyle.swift; sourceTree = "<group>"; };
+		B2D1F1422865CE62003502B5 /* SliderStyleKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderStyleKey.swift; sourceTree = "<group>"; };
+		B2D1F1442865CE7F003502B5 /* ValueSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueSlider.swift; sourceTree = "<group>"; };
+		B2D1F1462865CEA9003502B5 /* ValueSlider+Inits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValueSlider+Inits.swift"; sourceTree = "<group>"; };
+		B2D1F1482865CEC7003502B5 /* View+SliderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+SliderStyle.swift"; sourceTree = "<group>"; };
+		B2D1F14A2865CF1E003502B5 /* RangeSlider+Intis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RangeSlider+Intis.swift"; sourceTree = "<group>"; };
+		B2D1F14C2865CF48003502B5 /* GradientSliderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSliderStyle.swift; sourceTree = "<group>"; };
 		B2E70D47282F5F0700A37B43 /* UITableViewRepresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRepresentableView.swift; sourceTree = "<group>"; };
 		B2EC0116283DD37C00951969 /* HashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagView.swift; sourceTree = "<group>"; };
 		B2EC0118283DD5D200951969 /* HashTag2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTag2.swift; sourceTree = "<group>"; };
@@ -138,7 +157,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B20B6A722799058E0041C866 /* Sliders in Frameworks */,
 				B2341FD627E9A98800CE369E /* SwiftUITrackableScrollView in Frameworks */,
 				B2B50402279CA6EA00D22726 /* SliderRangeSwiftUI in Frameworks */,
 				B26927012861F68C00198EB8 /* AlertToast in Frameworks */,
@@ -284,11 +302,13 @@
 		B269EB54278BD0C80086DE40 /* SliderRange */ = {
 			isa = PBXGroup;
 			children = (
+				B2D1F13A2865CD8F003502B5 /* RangeSliderFramework */,
 				B269EB55278BD0DE0086DE40 /* SliderRangeView.swift */,
 				B269EB57278BD0F10086DE40 /* SliderRangeController.swift */,
 				B269EB59278BE0B20086DE40 /* SliderRange3.swift */,
 				B29201AC2796AB6E00226F93 /* SliderRange2.swift */,
 				B20B6A73279905AF0041C866 /* SliderRange4.swift */,
+				B2D1F1352865C2BB003502B5 /* RangeSliderExamplesView.swift */,
 			);
 			path = SliderRange;
 			sourceTree = "<group>";
@@ -379,6 +399,30 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		B2D1F13A2865CD8F003502B5 /* RangeSliderFramework */ = {
+			isa = PBXGroup;
+			children = (
+				B2D1F13D2865CDEC003502B5 /* Source */,
+			);
+			path = RangeSliderFramework;
+			sourceTree = "<group>";
+		};
+		B2D1F13D2865CDEC003502B5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B2D1F13B2865CDC3003502B5 /* RangeSlider.swift */,
+				B2D1F13E2865CE04003502B5 /* CustomSliderStyle.swift */,
+				B2D1F1402865CE36003502B5 /* SliderStyle.swift */,
+				B2D1F1422865CE62003502B5 /* SliderStyleKey.swift */,
+				B2D1F1442865CE7F003502B5 /* ValueSlider.swift */,
+				B2D1F1462865CEA9003502B5 /* ValueSlider+Inits.swift */,
+				B2D1F1482865CEC7003502B5 /* View+SliderStyle.swift */,
+				B2D1F14A2865CF1E003502B5 /* RangeSlider+Intis.swift */,
+				B2D1F14C2865CF48003502B5 /* GradientSliderStyle.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		B2EC0114283DD34400951969 /* UIRepresentableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,7 +495,6 @@
 			packageProductDependencies = (
 				B21A48C22779A2B5001FEC1D /* SwiftUIRefresh */,
 				B21A48C72779AD6A001FEC1D /* SwiftUIPullToRefresh */,
-				B20B6A712799058E0041C866 /* Sliders */,
 				B2B50401279CA6EA00D22726 /* SliderRangeSwiftUI */,
 				B2341FD527E9A98800CE369E /* SwiftUITrackableScrollView */,
 				B23CA2332806D8BC00E90288 /* NukeUI */,
@@ -489,7 +532,6 @@
 			packageReferences = (
 				B21A48C12779A2B5001FEC1D /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
 				B21A48C62779AD6A001FEC1D /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */,
-				B20B6A702799058E0041C866 /* XCRemoteSwiftPackageReference "sliders-backup" */,
 				B2B50400279CA6EA00D22726 /* XCRemoteSwiftPackageReference "SliderRangeSwiftUI" */,
 				B2341FD427E9A98800CE369E /* XCRemoteSwiftPackageReference "trackable-scroll-view" */,
 				B23CA2322806D8BC00E90288 /* XCRemoteSwiftPackageReference "NukeUI" */,
@@ -525,10 +567,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2ED86392769D34D00612F0D /* ImageViews.swift in Sources */,
+				B2D1F1432865CE62003502B5 /* SliderStyleKey.swift in Sources */,
 				B29201AD2796AB6E00226F93 /* SliderRange2.swift in Sources */,
+				B2D1F14B2865CF1E003502B5 /* RangeSlider+Intis.swift in Sources */,
 				B277A0552784065200A88380 /* AsyncImageViewController.swift in Sources */,
 				B215578E2775AAE5005FDA24 /* LoadMoreScrolView.swift in Sources */,
+				B2D1F13C2865CDC3003502B5 /* RangeSlider.swift in Sources */,
 				B2C5573B2769C9720016EF53 /* ContentView.swift in Sources */,
+				B2D1F1492865CEC7003502B5 /* View+SliderStyle.swift in Sources */,
 				B24329E72833F9E30034B6D5 /* HalfSheetCustomer.swift in Sources */,
 				B2E70D48282F5F0700A37B43 /* UITableViewRepresentableView.swift in Sources */,
 				B277A0532784063500A88380 /* AsyncImageView.swift in Sources */,
@@ -548,6 +594,7 @@
 				B2ED863B2769D3A700612F0D /* ImageViewPresentable.swift in Sources */,
 				B23AFAF02830E4350043CFCE /* User.swift in Sources */,
 				B23BD0E3285F8BF3003A41BE /* AlertView.swift in Sources */,
+				B2D1F14D2865CF48003502B5 /* GradientSliderStyle.swift in Sources */,
 				B23AFAE92830E3C80043CFCE /* UserRow.swift in Sources */,
 				B23BD0DB285F8910003A41BE /* AppDelegate.swift in Sources */,
 				B2C118AF2770829400F84CF0 /* RefreshableScrollView.swift in Sources */,
@@ -555,11 +602,13 @@
 				B2ED863F2769D61500612F0D /* ImageViewController.swift in Sources */,
 				B269EB5A278BE0B20086DE40 /* SliderRange3.swift in Sources */,
 				B2C557392769C9720016EF53 /* SwiftUI_TutorialApp.swift in Sources */,
+				B2D1F1412865CE36003502B5 /* SliderStyle.swift in Sources */,
 				B2C557492769C9FA0016EF53 /* UIKitConvertableSwiftUIPresentable.swift in Sources */,
 				B2699319276C33470056D631 /* ZoomableScrollView.swift in Sources */,
 				B269EB56278BD0DE0086DE40 /* SliderRangeView.swift in Sources */,
 				B20BE7FB27DB5E47009CCB6B /* TextFieldAutoFocused.swift in Sources */,
 				B23BD0DD285F8A31003A41BE /* VideoPicker.swift in Sources */,
+				B2D1F13F2865CE04003502B5 /* CustomSliderStyle.swift in Sources */,
 				B23AFAEE2830E4200043CFCE /* GithubAPIManager.swift in Sources */,
 				B20500342852319C00D2F3B0 /* Extensions.swift in Sources */,
 				B2EC0120283E1E0300951969 /* TextLabelWithHyperLink.swift in Sources */,
@@ -568,14 +617,17 @@
 				B23AFAEB2830E3DE0043CFCE /* ViewLoader.swift in Sources */,
 				B24329E52833F9CC0034B6D5 /* HalfSheetModal.swift in Sources */,
 				B2C5574B2769CAE60016EF53 /* UITextFieldPresentable.swift in Sources */,
+				B2D1F1472865CEA9003502B5 /* ValueSlider+Inits.swift in Sources */,
 				B2EC0119283DD5D200951969 /* HashTag2.swift in Sources */,
 				B23CA2372806D8D700E90288 /* NukeDemo.swift in Sources */,
 				B22A966D286054F600785C28 /* DemoAlertToast.swift in Sources */,
 				B232DA7227743D8D00D58DEC /* PinEntryView.swift in Sources */,
 				B22A966428602C1E00785C28 /* BlurView.swift in Sources */,
 				B2341FD327E9A96500CE369E /* TrackableScrollView.swift in Sources */,
+				B2D1F1452865CE7F003502B5 /* ValueSlider.swift in Sources */,
 				B232DA7027741B6700D58DEC /* VerificationView.swift in Sources */,
 				B2EC012B283E33DC00951969 /* ActiveLabelView.swift in Sources */,
+				B2D1F1362865C2BB003502B5 /* RangeSliderExamplesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,14 +818,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B20B6A702799058E0041C866 /* XCRemoteSwiftPackageReference "sliders-backup" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/moridaffy/sliders-backup.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		B21A48C12779A2B5001FEC1D /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/SwiftUIRefresh.git";
@@ -841,11 +885,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B20B6A712799058E0041C866 /* Sliders */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B20B6A702799058E0041C866 /* XCRemoteSwiftPackageReference "sliders-backup" */;
-			productName = Sliders;
-		};
 		B21A48C22779A2B5001FEC1D /* SwiftUIRefresh */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B21A48C12779A2B5001FEC1D /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;

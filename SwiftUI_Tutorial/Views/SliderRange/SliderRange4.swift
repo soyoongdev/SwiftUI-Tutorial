@@ -20,7 +20,7 @@ struct SliderRange4: View {
         VStack(spacing: 50) {
             Text("From: \(range.lowerBound) - to: \(range.upperBound)")
             
-            HRangeSlider(range: $range, in: 0.0...10.0, step: 1,
+            HRangeSlider(range: $range, in: 0.0...10.0, step: 0.5,
                          track:
                             HRangeTrack(
                                 range: range,
