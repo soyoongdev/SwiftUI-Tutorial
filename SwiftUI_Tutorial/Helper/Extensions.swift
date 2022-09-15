@@ -9,6 +9,16 @@ import SwiftUI
 
 // MARK: - Extension String
 
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).uppercased() + self.lowercased().dropFirst()
+    }
+    
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+}
+
 public extension String {
     func parseURL() -> URL {
         let this = self
