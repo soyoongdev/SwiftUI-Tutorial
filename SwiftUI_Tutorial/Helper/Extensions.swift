@@ -7,6 +7,31 @@
 
 import SwiftUI
 
+extension UIScreen {
+    public static var edges: UIEdgeInsets? {
+        let keyWindow = UIApplication.shared.connectedScenes
+            .filter({$0.activationState == .foregroundActive})
+            .map({$0 as? UIWindowScene})
+            .compactMap({$0})
+            .first?.windows
+            .filter({$0.isKeyWindow}).first
+        
+        return keyWindow?.safeAreaInsets
+    }
+    
+    public static var width: CGFloat {
+        return UIScreen.main.bounds.width
+    }
+    
+    public static var height: CGFloat {
+        return UIScreen.main.bounds.height
+    }
+    
+    public static func unit(_ number: CGFloat) -> CGFloat {
+        return (number * UIScreen.width) / 360
+    }
+}
+
 // MARK: - Extension String
 
 extension String {
@@ -16,6 +41,22 @@ extension String {
     
     mutating func capitalizeFirstLetter() {
         self = self.capitalizingFirstLetter()
+    }
+    
+    var numberFotmat: String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.decimalSeparator = ","
+        formatter.groupingSeparator = "."
+        
+        let doubleValue = (self as NSString).doubleValue
+        
+        print("doubleValue: \(doubleValue)")
+
+        let number = NSNumber(value: doubleValue)
+        let formattedValue = formatter.string(from: number)!
+        return String(formattedValue)
     }
 }
 
@@ -105,4 +146,14 @@ struct GeometryGetterMod: ViewModifier {
     }
 }
 
-
+extension Data
+{
+    func toJsonString() -> String {
+        if let JSONString = String(data: self, encoding: String.Encoding.utf8)
+        {
+            return JSONString
+        } else {
+            return "Cannot print json"
+        }
+    }
+}
